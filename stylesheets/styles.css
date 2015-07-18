@@ -584,6 +584,15 @@ a {
   font-weight: 400;
   text-decoration: none;
 }
+
+#welcome_text{
+  color:white;
+  margin-bottom:25px;
+  text-align:center;
+
+
+};
+
 a:hover {
   color: #ffeb9b;
 }
