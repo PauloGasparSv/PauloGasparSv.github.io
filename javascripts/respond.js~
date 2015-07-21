@@ -1,4 +1,3 @@
-var currentLang = 0;
 if(typeof Object.create!=="function"){
 Object.create=function(o){
 function F(){
@@ -777,6 +776,7 @@ document.execCommand("BackgroundImageCache",false,true);
 }
 catch(e){
 }
+<<<<<<< HEAD
 function mudaLingua(){
 	if(currentLang == 0){
 		document.getElementById('contributors').innerHTML = 'Contributors <a href="https://kauelopes.github.io" class="user-mention">@kauelopes</a> and <a href="https://github.com/ggomess" class="user-mention">@ggomess</a>';
@@ -803,3 +803,6 @@ function mudaLingua(){
 		currentLang = 0;
 	}
 }
+=======
+
+>>>>>>> 9404b3ea75d2da69400a5f66f0cf9af64d3c414b
