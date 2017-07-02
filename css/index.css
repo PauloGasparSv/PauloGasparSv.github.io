@@ -36,13 +36,13 @@ font-family: 'Roboto Slab','times new roman', serif;
 }
 .bg-2
 {
-    background-color:#feffff;
+    background-color:#ffffff;
 }
 
 /* SETUP */
 body
 {
-    background-color: #feffff;
+    background-color: #ffffff;
 }
 
 /* NAVIGATION BAR */
@@ -76,7 +76,7 @@ body
 .jumbotron
 {   
     padding-top:72px;
-    color:#feffff;
+    color:#ffffff;
     font-family: 'Roboto Slab','times new roman', serif;
     margin: 0;
 }
@@ -104,16 +104,56 @@ article .container-fluid
 	height: 350px;
 }
 
-.carousel img {
+.carousel img 
+{
     min-width: 100%;
 }
 
 /* FOOTER */
-footer div p{
+footer div p
+{
 	padding: 64px 0 48px 0;
 	color:white;
 }
 
-#footer-github{
+#footer-github
+{
 	margin-left: 8px;
+}
+
+/*  PROJECTS ONLY */
+.caption
+{
+	min-height: 128px;
+}	
+	
+.jumbotron a
+{
+	text-decoration: underline;
+	color:#ffffff;
+}
+
+#demo-video
+{
+	min-width: 420px;
+	min-height: 240px;
+}
+
+#demo-video-close
+{
+	margin-top:12px;	
+}
+
+.projetos
+{
+	padding-bottom: 24px;
+}
+
+
+@media (max-width: 768px) 
+{
+	.caption
+	{
+		min-height: 0px;	
+	}	
 }
