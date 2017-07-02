@@ -66,6 +66,12 @@ body
 	padding-right: 12px;
 }
 
+#flag
+{
+	padding-top:20px;
+	width:24px;
+}
+
 /* WELCOMING */
 .jumbotron
 {   
