@@ -110,6 +110,11 @@ article .container-fluid
     min-width: 100%;
 }
 
+.break-all
+{
+	word-break: break-all;	
+}
+
 /* FOOTER */
 footer div p
 {
@@ -134,12 +139,6 @@ footer div p
 	color:#ffffff;
 }
 
-#demo-video
-{
-	min-width: 420px;
-	min-height: 240px;
-}
-
 #demo-video-close
 {
 	margin-top:12px;	
@@ -156,5 +155,17 @@ footer div p
 	.caption
 	{
 		min-height: 0px;	
-	}	
+	}
+	.contact-text
+	{
+		display: block;
+	}
+}
+
+@media all and ( min-width: 768px ) {
+    div .embed-responsive{ 
+        width:560px;
+        padding-bottom:315px !important;
+		margin: auto;
+    }
 }
