@@ -33,12 +33,10 @@ font-family: 'Roboto Slab','times new roman', serif;
 .bg-1
 {
      background-color:#1d2120;
-     min-height: 400px;
 }
 .bg-2
 {
     background-color:#feffff;
-    min-height: 400px;
 }
 
 /* SETUP */
@@ -102,4 +100,14 @@ article .container-fluid
 
 .carousel img {
     min-width: 100%;
+}
+
+/* FOOTER */
+footer div p{
+	padding: 64px 0 48px 0;
+	color:white;
+}
+
+#footer-github{
+	margin-left: 8px;
 }
