@@ -56,6 +56,11 @@ body
 	background-color: white;	
 }
 
+.navbar-toggle
+{
+	margin-right: 45%;	
+}
+
 #nav-github
 {
     padding-top: 12px;
