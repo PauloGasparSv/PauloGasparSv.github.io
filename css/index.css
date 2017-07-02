@@ -149,6 +149,10 @@ footer div p
 	padding-bottom: 24px;
 }
 
+.start-hidden
+{
+	display: none;
+}
 
 @media (max-width: 768px) 
 {
