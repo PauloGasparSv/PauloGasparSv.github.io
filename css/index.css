@@ -1,0 +1,105 @@
+/*
+Darkest: #1d2120
+Gray: #5a5c51
+Washed out red: #ba9077
+Redder red: #c74141
+Grayish blue: #bcd5d1
+White : #ffffff
+font-family: 'Roboto','Arial', sans-serif
+font-family: 'Roboto Slab','times new roman', serif;
+*/
+
+/* CONSTANTS */
+.redish
+{
+    color: #c74141;
+}
+.gray
+{
+	color:	#5a5c51;
+}
+.bluish
+{
+	color:#bcd5d1;
+}
+.black
+{
+	color:black;
+}
+.white
+{
+	color:#ffffff;
+}
+.bg-1
+{
+     background-color:#1d2120;
+     min-height: 400px;
+}
+.bg-2
+{
+    background-color:#feffff;
+    min-height: 400px;
+}
+
+/* SETUP */
+body
+{
+    background-color: #feffff;
+}
+
+/* NAVIGATION BAR */
+
+.navbar
+{
+    margin: 0;
+    font-size: 22px;
+    font-family: 'Roboto','Arial', sans-serif;
+    box-shadow: 4px 2px 12px #1d2120;
+	background-color: white;	
+}
+
+#nav-github
+{
+    padding-top: 12px;
+}
+
+.navbar .glyphicon
+{
+	padding-right: 12px;
+}
+
+/* WELCOMING */
+.jumbotron
+{   
+    padding-top:72px;
+    color:#feffff;
+    font-family: 'Roboto Slab','times new roman', serif;
+    margin: 0;
+}
+
+#profile-pic
+{
+    width: 256px;
+    margin: 64px auto;
+}
+
+/* ABOUT ME */
+article .container-fluid
+{
+	padding:64px;
+}
+
+.about-me 
+{
+	color: #5a5c51;
+}
+
+.about-me img
+{
+	width: 500px;
+	height: 350px;
+}
+
+.carousel img {
+    min-width: 100%;
+}

@@ -1,114 +1,110 @@
 <!doctype html>
-<html>
-  <head>
+<html lang="pt">
+<head>
+    <title>Bem vindo ao meu portifolio</title>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="keywords" content="Paulo,Portifolio,Curriculo,Curriculum, Currículo">
-    <meta name="description" content="My portifolio">
-    <meta name="author" content="Paulo Gaspar Sena do Vale">
-    <title>Paulo Gaspar Portifolio</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-dark.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-     <script src="javascripts/respond.js"></script>
-    <script src="javascripts/meuScript.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-  </head>
-  <body>
-      <div id="header"> 
-        <nav>
-          <li class="fork"><a href="https://github.com/PauloGasparSv" id="button_github"><strong>Visitar no GitHub</strong></a></li>
-           <li class="fork"><a href="projects.htm" id="button_projetos"><strong>Meus projetos</strong></a></li>
-           <li class="fork"><a href="contact.html" id="button_contatos"><strong>Contatos</strong></li></a>
-          <li class="teste" style="float:right" id="button_language" onclick="mudaLingua()"><strong>English</strong></li>
-        </nav>
-      </div>
-
-    <div class="wrapper">
-
-      <section>
-        <div id="title">
-          <h1><b>Paulo Gaspar</b></h1>
-          <p>Curriculum</p>
-          <hr>
-          <span class="credits left">Project by <a href="https://github.com/PauloGasparSv">PauloGasparSv</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Original theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+    <meta name="author" content="Paulo Gaspar">
+    <meta name="keywords" content="Portifolio Desenvolvedor Programador">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <!-- Bibliotecas -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Meu codigo -->
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <!--<script src="./js/index.js"></script>-->
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header navbar-right">
+            	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navi">
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+            	</button>
+            	<a id="nav-github" class="navbar-brand" href="#"><img src="./img/github-logo/GitHub-Mark-32px.png" alt="GitHub"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navi">
+				<ul class="nav navbar-nav navbar-left">
+					<li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Inicio</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span>Sobre Mim</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-briefcase"></span>Meus Projetos</a></li>
+				</ul>
+            </div>
         </div>
+    </nav>
+    <header>
+        <div class="jumbotron text-center bg-1">
+            <h1>Olá, nome é <span class="redish">Paulo Gaspar</span></h1>
+            <a href="#"><img id="profile-pic" src="./img/profile.jpg" class="img-circle img-responsive" alt="Profile Pic"></a>
+            <p>Sou um <span class="redish">desenvolvedor</span> e <span class="redish"> estudante</span> de <span class="redish">Sistemas de informação</span> pela USP.</p>
+        </div> 
+    </header>
+  	<section>
+		<article>
+			<div class="container-fluid bg-2 about-me">
+				<div class="row">
+					<div class="col-sm-7">
+						<h2 class="black">Um pouco sobre mim</h2>
+						<hr>
+						<h4>Atualmente trabalho como <span class="redish">desenvolvedor web junior</span> utilizando <span class="redish">Salesforce</span> e outras ferramentas web. Em meu tempo livre tento desenvolver novos projetos sozinho ou com amigos, muitas vezes tentando criar <span class="redish">jogos</span>.</h4>
+						<h4>Sou um <span class="redish">estudante</span> brasileiro da <span class="redish">Universidade de São Paulo</span> do curso de <span class="redish">Sistemas de Informação</span> desde o ano de 2015.</h4>
+						<h4>Costumo contribuir em projetos com os desenvolvedores <a href="kauelopes.github.io">Kaue Lopes Moraes</a> e <a href=""> Gabriel Gomes Aiala</a>. Veja a página deles!</h4>
+					</div>
+					<div class="col-sm-5">
+					
+						<div id="ex-carousel" class="carousel slide" data-ride="carousel">
+							<ol class="carousel-indicators">
+								<li data-target="#ex-carousel" data-slide-to="0" class="active"></li>
+								<li data-target="#ex-carousel" data-slide-to="1"></li>
+								<li data-target="#ex-carousel" data-slide-to="2"></li>
+							</ol>
+						
 
-        
-<a id="bem-vindo" class="anchor" href="#bem-vindo" aria-hidden="true"><span class="octicon octicon-link"></span></a><h3 id="welcome_text"><strong>Bem vindo!</strong></h3>
+							<div class="carousel-inner">
+								<div class="item active">
+									<img src="./img/code.jpg" class="img-rounded" alt="Code" >
+								</div>
+								<div class="item">
+									<img src="./img/ninja.jpg" class="img-rounded" alt="Ninja Time">
+									<div class="carousel-caption">
+										<h2><mark>Ninja Time</mark></h2>
+										<p><mark>Encontre na página de projetos</mark></p>
+									</div>
+								</div>
+								<div class="item">
+									<img src="./img/hero.jpg" class="img-rounded" alt="Hero" >
+									<div class="carousel-caption">
+									<p><mark>Encontre na página de projetos</mark></p>
+									</div>
+								</div>
+							</div>
 
-<p id="description">Essa é a minha página pessoal, aqui você pode encontrar meu curriculum e meu portifólio! 
-Sou um estudante de Sistemas de Informação da Universidade de São Paulo. Me interesso em desenvolvimento de software, sistemas operacionais, edição de imagens, animação, desenvolvimento de jogos e um pouco de eletrônica e web design. Costumo criar alguns jogos e outros tipos de programas para desktop em meu tempo livre. Aqui estão as minhas habilidades e experiências anteriores:</p>
-
-<pre><code><h4><b id="stuff">Linguagens de programação:
-Java
-C/C++
-Python
-JavaScript
-C#
-
-Bibliotecas e frameworks mais usadas:
-Lwjgl
-Libgdx
-Slick
-PyGame
-Allegro
-XNA
-
-Gráficos:
-Photshop
-Fireworks
-Illustrator
-Flash
-Blender
-
-Sistemas operacionais:
-Windows
-Linux (Ubuntu)
-
-Outros:
-HTML
-CSS
-Pacote Office (Microsoft Word, Microsot Excel, etc)
-Git
-Audacity
-
-Experiência:
--Inglês fluente (CNA)
--Web Design (Microcamp, 2004 - 2006, não acabado)
--Técnico em Programação de Jogos Digitais (ETEC Guaracy Silveira, 2012 - 2013)
--Bacharelado em Sistemas de Informação (USP, 2015-cursando)
-
-</b></h4></code></pre>
-
-<p id="interesse">Se estiver interessado em acompanhar mais projetos entre em <a href="https://github.com/PauloGasparSv">https://github.com/PauloGasparSv</a></p>
-
-<div style="text-align:center">
-<p id="contributors">Contribuidores
-<a href="https://kauelopes.github.io" class="user-mention">@kauelopes</a> e <a href="https://github.com/ggomess" class="user-mention">@ggomess</a></p></div>
-      </section>
-
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+							<a href="#ex-carousel" class="left carousel-control" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left"></span>
+								<span class="sr-only">Anterior</span>
+							</a>
+							<a class="right carousel-control" href="#ex-carousel" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right"></span>
+								<span class="sr-only">Proximo</span>
+							</a>
+							
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			
+		</article>
+    </section> 
     
-
     <footer>
-      
-      <nav>
-          <li class="fork"><a href="https://github.com/PauloGasparSv" id="roda_github"><strong>Visitar no GitHub</strong></a></li>
-           <li class="fork"><a href="projects.htm" id="roda_projetos"><strong>Meus projetos</strong></a></li>
-           <li class="fork"><a href="contact.html" id="roda_contatos"><strong>Contatos</strong></li></a>
-        </nav>
-
+    	
     </footer>
 
-  </body>
+</body>
 </html>
