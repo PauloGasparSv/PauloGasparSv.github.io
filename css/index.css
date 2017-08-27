@@ -89,13 +89,41 @@ body
 }
 
 /* ABOUT ME */
+
+/*THIS IS NOT MY CODE, GOT THIS PART FROM STACK OVERFLOW, COULD NOT FIGURE OUT HOW TO MAKE BOOTSTRAP DAMM GRID SYSTEM HAVE THE SAME BLOODY HEIGHT*/
+.panel-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  flex-wrap: wrap;
+}
+.panel-col {
+  display: flex;
+  flex-direction: column;
+}
+/*THIS IS NOT MY CODE, GOT THIS PART FROM STACK OVERFLOW, COULD NOT FIGURE OUT HOW TO MAKE BOOTSTRAP DAMM GRID SYSTEM HAVE THE SAME BLOODY HEIGHT*/
+
+.panel
+{
+	height: 100%;
+}
+
 article .container-fluid
 {
 	padding:64px;
 }
 
+
+.title
+{
+	margin-bottom: 16px;
+}
+
 .about-me 
 {
+	padding-top: 24px;
+	padding-bottom: 24px;
 	color: #5a5c51;
 }
 
