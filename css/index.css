@@ -86,7 +86,68 @@ body
 {
     width: 256px;
     margin: 64px auto;
+   	transition: 2s;
+   	transition-delay: 3s;
 }
+
+#profile-pic:hover
+{
+	transform: rotateY(360deg);
+}
+
+.appear-left-2
+{	
+	transform: translateX(-2000px);
+	animation-name: marquee-left;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+.appear-left-4
+{	
+	transform: translateX(-2000px);
+	animation-name: marquee-left;
+	animation-duration: 4s;
+	animation-fill-mode: forwards;
+}
+
+.appear-left-6
+{	
+	transform: translateX(-2000px);
+	animation-name: marquee-left;
+	animation-duration: 6s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes marquee-left
+{
+	from{transform: translateX(-2000px);}
+	to{transform: translateX(0px);}
+}
+
+.fade-in
+{	
+	opacity: 0s;
+	animation-name: fade-me-in;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+
+.fade-in-delay-4
+{	
+	visibility: hidden;
+	animation-name: fade-me-in;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+	animation-delay: 4s;
+}
+
+@keyframes fade-me-in
+{
+	from{opacity: 0;}
+	to{opacity: 1;visibility: visible;}
+}
+
 
 /* ABOUT ME */
 
@@ -106,7 +167,33 @@ body
 
 .panel
 {
-	height: 100%;
+	overflow:hidden;
+	visibility: hidden;
+	animation-name: show;
+	animation-fill-mode: forwards;
+}
+
+.estudos
+{
+	animation-duration: 4s;
+}
+
+.experiencias
+{
+	animation-delay: 0.4s;
+	animation-duration: 3s;
+}
+
+.habilidades
+{
+	animation-delay: 0.8s;
+	animation-duration: 2s;
+}
+
+@keyframes show
+{
+	from {height: 1%;visibility: visible;}
+	to { height: 100%;visibility: visible;}
 }
 
 article .container-fluid
