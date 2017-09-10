@@ -12,8 +12,30 @@ $(document).ready(function(){
 		{
 			clicks++;
 			$("#profile-pic").attr("src","./img/goat-profile.jpg");
-			alert('Segredo para brocs')
+			alert('Segredo para brocs');
+			changeBackground();
 		}
 	});
 	
 });
+
+'use strict';
+
+function getNewColor()
+{
+    return 'rgb(' + Math.trunc(Math.random() * 255) + ',' + Math.trunc(Math.random() * 255) +',' + Math.trunc(Math.random() * 255) + ')';
+}
+
+function changeBackground()
+{
+	try{
+		let z = document.querySelectorAll('*');
+		for(let i = 0; i < z.length; i ++)
+			z[i].style.color = getNewColor();
+	}catch(e){
+		console.log('fuck');
+	}
+	
+    setTimeout(changeBackground,300);
+}
+
