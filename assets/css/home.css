@@ -108,7 +108,7 @@ li#hamburguer{
     z-index: 3;
 }
 
-#background-gamepad{
+.background-gamepad{
     z-index: 2;
     opacity: 0.4;
     width: 25%;
@@ -118,7 +118,7 @@ li#hamburguer{
     transform: rotate(30deg);
 }
 
-#background-binary{
+.background-binary{
     z-index: 2;
     opacity: 0.4;
     width: 22%;
@@ -128,7 +128,7 @@ li#hamburguer{
     transform: rotate(-10deg);
 }
 
-#background-nerd{
+.background-nerd{
     z-index: 2;
     opacity: 0.4;
     width: 20%;
@@ -136,6 +136,12 @@ li#hamburguer{
     top: 65%;
     position: absolute;
     transform: rotate(22deg);
+}
+.background-gamepad.png, .background-binary.png, .background-nerd.png{
+    display: none;
+}
+.background-gamepad.svg, .background-binary.svg, .background-nerd.svg{
+    display: block;
 }
 
 #intro{
@@ -250,16 +256,22 @@ li#hamburguer{
         left: 32px;
         top: 0;
     }
+    .background-gamepad.png, .background-binary.png, .background-nerd.png{
+        display: block;
+    }
+    .background-gamepad.svg, .background-binary.svg, .background-nerd.svg{
+        display: none;
+    }
 
-    #background-gamepad{
+    .background-gamepad{
         width: 38%;
     }
 
-    #background-binary{
+    .background-binary{
         width: 30%;
     }
 
-    #background-nerd{
+    .background-nerd{
         width: 32%;
     }
 
