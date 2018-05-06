@@ -1,141 +1,30 @@
-<!doctype html>
-<html lang="pt">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111824896-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-111824896-1');
-	</script>
-
-    <title>Bem vindo ao meu portifolio</title>
-    <meta charset="utf-8">
-    <meta name="author" content="Paulo Gaspar">
-    <meta name="keywords" content="Portifolio Desenvolvedor Programador Paulo Gaspar">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <!-- Bibliotecas -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- Meu codigo -->
-    <link rel="stylesheet" type="text/css" href="./css/index.css">
-    <script src="./js/index.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <title>Paulo Vale</title>
 </head>
 <body>
-   	<div class="container-fluid">
-		<nav class="navbar navbar-default navbar-fixed-top">
-			<div class="container-fluid">
-				<div class="navbar-header navbar-right">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navi">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a id="nav-github" class="navbar-brand" href="https://github.com/PauloGasparSv"><img src="./img/github-logo/GitHub-Mark-32px.png" alt="GitHub"></a><a href="index-en.html"><img id="flag" src="./img/us-icon.png" alt="EN-US"></a>
-				</div>
-				<div class="collapse navbar-collapse" id="navi">
-					<ul class="nav navbar-nav navbar-left">
-						<li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Inicio</a></li>
-						<li><a href="sobremim.html"><span class="glyphicon glyphicon-user"></span>Sobre Mim</a></li>
-						<li><a href="projetos.html"><span class="glyphicon glyphicon-briefcase"></span>Meus Projetos</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+    <div id="nav-bar">
+        <ul id="nav-list">
+            <a href="https://github.com/PauloGasparSv"><li id="github-logo"></li></a>
+            <li>Sobre Mim</li>
+            <li>Meus Projetos</li>
+            <li>Contatos</li>
+        </ul>
     </div>
-    <header>
-        <div class="jumbotron text-center bg-1">
-            <h1 class="appear-left-2">Olá, meu nome é <span id="name" class="redish">Paulo Gaspar</span></h1>
-            <a href="https://github.com/PauloGasparSv" target="_blank"><img id="profile-pic" src="./img/profile.jpg" class="img-circle img-responsive appear-left-4" alt="Profile Pic"></a>
-            <p class="appear-left-6">Sou um <span class="redish">desenvolvedor</span> e <span class="redish"> estudante</span> de <span class="redish">Sistemas de informação</span> pela USP.</p>
-        </div> 
-    </header>
-  	<section>
-		<article>
-			<div class="container-fluid bg-2 about-me">
-				<div class="row">
-					<div class="col-sm-7">
-						<hr>
-						<h2 class="black">Um pouco sobre mim</h2>
-						<hr>
-						<h4>Me chamo Paulo Gaspar Sena do Vale. Atualmente trabalho como <span class="redish">desenvolvedor web júnior</span> utilizando <span class="redish">Salesforce</span> e outras ferramentas web. Em meu tempo livre, gosto de desenvolver novos projetos sozinho ou com amigos, muitas vezes tentando criar <span class="redish">jogos</span>.</h4>
-						<h4>Sou um <span class="redish">estudante</span> brasileiro da <span class="redish">Universidade de São Paulo</span> do curso de <span class="redish">Sistemas de Informação</span> desde o ano de 2015. Sou <span class="redish">fluente em inglês</span> desde que me lembro. Costumo fazer meus projetos usando <span class="redish">Java</span> ou <span class="redish">Python</span> por costume mas programo em outras linguagens.</h4>
-						<h4>Costumo contribuir em projetos com os desenvolvedores <a href="http://kauelopes.github.io/" target="_blank">Kaue Lopes Moraes</a> e <a href="https://github.com/ggomess?tab=repositories" target="_blank"> Gabriel Gomes Aiala</a>. Visite a página deles clicando em seus nomes!</h4>
-						<hr>
-						<h2 class="black">Locais em que trabalhei</h2>
-						<hr>
-						<h4>BSI - Desenvolvedor Jr. <span class="badge">2017 - Atualmente</span></h4>	
-						<h4>E-gestão - Analista de Suporte Sênior <span class="badge">2016-2017</span></h4>	
-						<h4>E-gestão - Estágiario <span class="badge">2016-2016</span></h4>
-						<hr>
-					</div>
-					<div class="col-sm-5">
-					
-						<div id="ex-carousel" class="carousel slide" data-ride="carousel">
-							<ol class="carousel-indicators">
-								<li data-target="#ex-carousel" data-slide-to="0" class="active"></li>
-								<li data-target="#ex-carousel" data-slide-to="1"></li>
-								<li data-target="#ex-carousel" data-slide-to="2"></li>
-							</ol>
-						
-
-							<div class="carousel-inner">
-								<div class="item active">
-									<img src="./img/code.jpg" class="img-rounded" alt="Code" >
-								</div>
-								<div class="item">
-									<img src="./img/ninja.jpg" class="img-rounded" alt="Ninja Time">
-									<div class="carousel-caption">
-										<h2><mark>Ninja Time</mark></h2>
-										<p><mark>Encontre na página de projetos</mark></p>
-									</div>
-								</div>
-								<div class="item">
-									<img src="./img/hero.jpg" class="img-rounded" alt="Hero" >
-									<div class="carousel-caption">
-									<p><mark>Encontre na página de projetos</mark></p>
-									</div>
-								</div>
-							</div>
-
-	
-							<a href="#ex-carousel" class="left carousel-control" data-slide="prev">
-								<span class="glyphicon glyphicon-chevron-left"></span>
-								<span class="sr-only">Anterior</span>
-							</a>
-							<a class="right carousel-control" href="#ex-carousel" data-slide="next">
-								<span class="glyphicon glyphicon-chevron-right"></span>
-								<span class="sr-only">Proximo</span>
-							</a>
-							
-						</div>
-						
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-8 break-all">
-						<h2 class="black">Entre em contato comigo</h2>
-						<hr>
-						<h3>E-mail: <span class="redish contact-text">paulogaspar404@gmail.com.br </span> <span class="redish contact-text"> paulogaspar404@hotmail.com.br</span></h3>
-						<h3>Twitter: <span class="redish contact-text">@pauloGvale</span></h3>
-					</div>
-				</div>
-			</div>
-			
-		</article>
-    </section> 
-    
-    <footer>
-    	<div class="container-fluid bg-1 text-center">
-    		<p>V2.0 Criado por <span class="redish">Paulo Gaspar Sena do Vale</span> em <span class="redish">2017.</span> Visite no github <a id="footer-github" href="https://github.com/PauloGasparSv"><img src="./img/github-logo/GitHub-Mark-Light-32px.png" alt="GitHub"></a></p>
-    	</div>
-    </footer>
-
+    <div id="intro">
+        <h1>Olá, meu nome é <span id="hidden-portrait-activate" class="important clickable">Paulo Vale</span><div id="hidden-portrait"></div></h1>
+        <div id="cup"></div>
+        <h2>Eu sou um desenvolvedor web e desktop!</h2>
+        <h3>Trabalho com back end, front end e um pouquinho de design</h3>
+    </div>
+    <div class="divison"></div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <script src="assets/js/home.js"></script>
 </body>
 </html>

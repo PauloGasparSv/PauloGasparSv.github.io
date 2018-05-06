@@ -1,0 +1,221 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+    font-family: 'Roboto', sans-serif;
+    background-color: #d4d4d4;
+    overflow-x: hidden;
+}
+
+.clickable{
+    cursor: pointer;
+}
+
+#nav-bar{
+    position: fixed;
+    background: #0c0c0c;
+    width: 100%;
+    height: 64px;
+    z-index: 100;
+    overflow: hidden;
+}
+
+#nav-list{
+    list-style: none;
+    margin: 0;
+    height: 100%;
+}
+
+#nav-list li{
+    height: inherit;
+    color: white;
+    display: inline-block; 
+    font-size: 24px;
+    padding-top: 18px;
+    margin-right: 36px;
+}
+
+#hidden-portrait{
+    opacity: 0;
+    border-radius: 24px;
+    border: 6px solid black;
+    position: absolute;
+    display: block;
+    width: 128px;
+    height: 128px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../images/Temp.jpg);
+}
+
+#github-logo{
+    margin-bottom: -26px;
+    margin-right: 64px !important;  
+    min-width: 32px;
+    height: 32px !important;
+    opacity: 0.85;
+    background-repeat: no-repeat;
+    background-image: url(../images/GitHub-Mark-Light-32px.png);
+}
+#github-logo:hover{
+    opacity: 1;
+}
+
+.divison{
+    position: relative;
+    transform: translateX(-30px) rotate(-4deg);
+    background: #151515;
+    width: 104%;
+    height: 128px;
+    margin-top: -81px;
+    overflow: hidden;
+    margin-left: 24px;
+    z-index: 0;
+}
+
+#intro{
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 536px;
+    max-height: 1080px;
+    background: #151515; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;  
+}
+
+#intro h1{
+    position: relative;
+    text-align: center;
+    margin: 0;
+    color: white;
+    animation: appear-delay 3s linear forwards;
+}
+
+#intro h2{
+    position: relative;
+    text-align: center;
+    margin: 0;
+    color: white;
+    animation: appear-delay 3s linear forwards;
+}
+
+#intro h1:nth-child(1){
+    margin-top: 64px;
+    margin-bottom: 48px;
+}
+#intro h2:nth-child(3){
+    margin-top: 48px;
+}
+
+#intro h1 span.important{
+    color: #9d252b;
+}
+
+#intro h3{
+    padding-top: 12px;
+    width: 50%;
+    text-align: center;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.5);
+    animation: appear-delay 3s linear forwards;
+}
+
+#cup{
+    position: relative;
+    width: 200px;
+    height: 160px;
+
+    border-radius: 84px;
+    border-top: 2px solid transparent;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+
+    background: url(../images/coffe-2.png);
+    background-repeat: repeat-x;
+    
+    animation: coffeAnimation 12s linear infinite, appear 4s linear forwards;
+
+    box-shadow: 0 0 0 14px #FFF;
+
+}
+
+#cup:before{
+    content: '';
+    position: absolute;
+    right: -58px;
+    top: 8px;
+    width: 40px;
+    height: 56px;
+    border: 14px solid white;
+    border-left: 0px solid transparent;
+    border-top-right-radius: 38px;
+    border-bottom-right-radius: 38px;
+}
+
+@media screen and (max-height: 526px){
+    #intro{
+        padding-top: 32px; 
+    }
+}
+
+@media screen and (max-height: 380px){
+    #intro{
+        padding-top: 92px; 
+    }
+}
+@media screen and (max-width: 662px){
+    #cup{
+      width: 120px;
+      height: 90px;
+      border-radius: 54px;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      box-shadow: 0 0 0 9px #FFF;
+    }
+    #cup:before{
+        top: -2px;
+        right: -38px;
+        width: 24px;
+        height: 32px;
+        border: 10px solid white;
+        border-left: none;
+    }
+}
+
+
+@keyframes coffeAnimation{
+    0%{
+        background-position: 0px 160px;  
+    }
+    60%{
+        background-position: 830px 0px;  
+    }
+    100%{
+        background-position: 1860px 160px;  
+    }
+}
+@keyframes appear-delay{
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
