@@ -52,7 +52,7 @@ const Post = (url, data) =>
     });
 }
 
-const FadeIn = (element, opacity) => 
+const FadeIn = (element, opacity, speed) => 
 {
     return new Promise((resolve, reject) => 
     {
@@ -70,7 +70,9 @@ const FadeIn = (element, opacity) =>
             else
                 opacity = 0.0;
         }
-        opacity += 0.08;
+
+        if(!speed) speed = 0.08;
+        opacity += speed;
         if(opacity >= 1)
         {
             opacity = 1;
@@ -85,7 +87,7 @@ const FadeIn = (element, opacity) =>
     });
 }
 
-const FadeOut = (element, opacity) => 
+const FadeOut = (element, opacity, speed) => 
 {
     return new Promise((resolve, reject) => 
     {
@@ -101,9 +103,10 @@ const FadeOut = (element, opacity) =>
             if(element.style.opacity)
                 opacity = parseFloat(element.style.opacity);
             else
-                opacity = 0.0;
+                opacity = 1;
         }
-        opacity -= 0.06;
+        if(!speed) speed = 0.08;
+        opacity -= speed;   
         if(opacity <= 0)
         {
             opacity = 0;
@@ -115,5 +118,115 @@ const FadeOut = (element, opacity) =>
             element.style.opacity = opacity;
             setTimeout( () => FadeOut(element, opacity).then(() => resolve()).catch( () => reject()), 50);
         }
+    });
+}
+
+const Rotate = (element, rotation, speed) => 
+{
+    return new Promise( (resolve, reject) => 
+    {
+        if(!element.style.transform)
+        {
+            element.style.transform = 'rotate(0deg)';
+        }
+        else
+        {
+            let props = element.style.transform.trim().split(' '); 
+            let currentRotation = undefined;
+            for(let i = 0; i < props.length; i++)
+            {
+                if(props[i].toLowerCase().indexOf('rotate') > -1)
+                {
+                    currentRotation = props[i].trim();
+                    props.splice(i, 1);
+                }
+            }
+            if(!currentRotation)
+            {
+                currentRotation = 'rotate(0deg)';
+            }
+            
+            let calcRotation = parseFloat(currentRotation.substring(currentRotation.indexOf('(') + 1, currentRotation.indexOf('d')));
+            
+            let finish = false;
+            if(calcRotation < rotation)
+            {
+                calcRotation += speed;
+                if(calcRotation >= rotation)
+                {
+                    calcRotation = rotation;
+                    finish = true;
+                }
+            }
+            else
+            {
+                calcRotation -= speed;
+                if(calcRotation <= rotation)
+                {
+                    calcRotation = rotation;
+                    finish = true;
+                }
+            }
+            
+            props.push('rotate(' + calcRotation + 'deg)');
+            element.style.transform = props.join(' ');
+
+            if(finish == true)
+            {
+                resolve();
+                return;
+            }
+        }
+        setTimeout( () => Rotate(element, rotation, speed).then(() => resolve()).catch( () => reject()), 30);
+    });
+}
+
+const MoveY = (element, position, speed) => 
+{
+    return new Promise( (resolve, reject) =>
+    {
+        let currentY = 0;
+        if(!element.style.top)
+        {
+            element.style.top = '0px';
+        }
+        else
+        {
+            currentY = parseFloat(element.style.top.substring(0, element.style.top.length - 2));
+        }
+
+        if(!speed) speed = 0.5;
+
+        let finished = false;
+
+        if(position > 0)
+        {
+            currentY -= speed;
+            if(-currentY > position)
+            {
+                currentY = -position;
+                finished = true;
+            } 
+        }
+        else
+        {
+            currentY += speed;
+            console.log('Current: ' + currentY + ' pos: ' + position);
+            if(currentY > -position)
+            {
+                currentY = -position;
+                finished = true;
+            }
+        }
+
+        element.style.top = currentY + 'px';
+
+        if(finished == true)
+        {
+            resolve();
+            return;
+        }
+
+        setTimeout( () => MoveY(element, position).then(() => resolve()).catch( () => reject()), 30);
     });
 }
