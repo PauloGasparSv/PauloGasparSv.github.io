@@ -143,6 +143,10 @@ body{
     color: #9d252b;
 }
 
+#hidden-portrait-activate{
+    animation: ease-in-out text-red-glow 1s infinite;
+}
+
 #intro h3{
     padding-top: 12px;
     width: 50%;
@@ -215,6 +219,7 @@ body{
 }
 
 
+
 @keyframes coffeAnimation{
     0%{
         background-position: 0px 160px;  
@@ -235,5 +240,17 @@ body{
     }
     100%{
         opacity: 100%;
+    }
+}
+
+@keyframes text-red-glow{
+    0%{
+        text-shadow: 0px 0px 24px #540000;
+    }
+    50%{
+        text-shadow: 0px 0px 32px #750000;
+    }
+    100%{
+        text-shadow: 0px 0px 24px #540000;
     }
 }
