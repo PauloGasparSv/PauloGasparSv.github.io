@@ -192,6 +192,7 @@ const MoveY = (element, position, speed) =>
         }
         else
         {
+            console.log(element.style.top);
             currentY = parseFloat(element.style.top.substring(0, element.style.top.length - 2));
         }
 
@@ -211,7 +212,6 @@ const MoveY = (element, position, speed) =>
         else
         {
             currentY += speed;
-            console.log('Current: ' + currentY + ' pos: ' + position);
             if(currentY > -position)
             {
                 currentY = -position;
@@ -227,6 +227,6 @@ const MoveY = (element, position, speed) =>
             return;
         }
 
-        setTimeout( () => MoveY(element, position).then(() => resolve()).catch( () => reject()), 30);
+        setTimeout( () => MoveY(element, position,speed).then(() => resolve()).catch( () => reject()), 30);
     });
 }

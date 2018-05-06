@@ -144,6 +144,20 @@ li#hamburguer{
     display: block;
 }
 
+#sub-list{
+    background: #0c0c0c;
+    display: none;
+    opacity: 0;
+    z-index: 101;
+    width: 180px;
+    height: 192px;
+    position: fixed;
+    right: 0;
+    top: -128px;
+    border-bottom-left-radius: 8px; 
+    border-bottom-right-radius: 8px; 
+}
+
 #intro{
     position: relative;
     z-index: 2;
@@ -293,6 +307,7 @@ li#hamburguer{
         width :32px;
         height: 3px;
         background: white;
+        z-index: 102;
     }
     #hamburguer .line:nth-child(1){
         top: 6px;

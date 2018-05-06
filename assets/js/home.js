@@ -23,7 +23,6 @@ window.onload = () =>
     {
         if(clickedHamburguer == 0)
         {
-            console.log('megamark');
             clickedHamburguer = 1;
             Rotate(document.querySelector('#hamburguer .line:nth-child(3)'), -45, 10);
             FadeOut(document.querySelector('#hamburguer .line:nth-child(2)'), 1, 0.8);MoveY
@@ -38,6 +37,12 @@ window.onload = () =>
             {
                 clickedHamburguer = 2;
             });
+
+            let list = document.querySelector('#sub-list');
+            list.style.display = 'block';
+            list.style.opacity = '1';   
+            list.style.top = '-128px';
+            MoveY(document.querySelector('#sub-list'), -64, 20);
         }
         else if(clickedHamburguer == 2)
         {
@@ -54,6 +59,19 @@ window.onload = () =>
             .catch( () => 
             {
                 clickedHamburguer = 0;
+            });
+            
+            let list = document.querySelector('#sub-list');
+            MoveY(document.querySelector('#sub-list'), 128, 40)
+            .then( () => 
+            {
+                list.style.display = 'none';
+                list.style.opacity = '0';  
+            })
+            .catch( () => 
+            {
+                list.style.display = 'none';
+                list.style.opacity = '0';  
             });
         }
     });
