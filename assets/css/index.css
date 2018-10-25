@@ -1,9 +1,9 @@
 :root {
-    --color-darker: #355C7D;
-    --color-dark: #6C5B7B;
-    --color-medium: #C06C84;
-    --color-normal: #F67280;
-    --color-light: #F8B195;
+    --color-darker: #0D0802;
+    --color-dark: #024059;
+    --color-normal: #026773;
+    --color-light: #027373;
+    --color-main: #730C02;
 }     
 
 *{
@@ -26,17 +26,17 @@ html, body{
 }
 
 #introduction > div:nth-child(1){
-    background: var(--color-light);
+    background: var(--color-darker);
 }
 #introduction > div:nth-child(2){
-    background: var(--color-normal);
-}
-#introduction > div:nth-child(3){
-    background: var(--color-medium);
-}
-#introduction > div:nth-child(4){
     background: var(--color-dark);
 }
+#introduction > div:nth-child(3){
+    background: var(--color-normal);
+}
+#introduction > div:nth-child(4){
+    background: var(--color-light);
+}
 #introduction > div:nth-child(5){
-    background: var(--color-darker);
+    background: var(--color-main);
 }
