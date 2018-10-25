@@ -1,0 +1,42 @@
+:root {
+    --color-darker: #355C7D;
+    --color-dark: #6C5B7B;
+    --color-medium: #C06C84;
+    --color-normal: #F67280;
+    --color-light: #F8B195;
+}     
+
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+#introduction{
+    width: 100vw;
+    height: 100vh;
+}
+
+#introduction> div{
+    width: 100vw;
+    height: 20%;
+}
+
+#introduction > div:nth-child(1){
+    background: var(--color-light);
+}
+#introduction > div:nth-child(2){
+    background: var(--color-normal);
+}
+#introduction > div:nth-child(3){
+    background: var(--color-medium);
+}
+#introduction > div:nth-child(4){
+    background: var(--color-dark);
+}
+#introduction > div:nth-child(5){
+    background: var(--color-darker);
+}
