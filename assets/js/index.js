@@ -20,11 +20,11 @@ window.onload = () => {
         current_char ++;
         document.querySelector('#introduction .greetings').innerHTML = phrases[current_phrase].substring(0, current_char);
         if(current_char == phrases[current_phrase].length + 1){
-            setTimeout(() => removePhrase(), 1000);
+            setTimeout(() => removePhrase(), 2500);
             return;
         }
         setTimeout(() => addPhrase(), 36);
     }
 
-    setTimeout(() => removePhrase(), 1000);
+    setTimeout(() => removePhrase(), 2500);
 }

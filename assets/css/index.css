@@ -92,3 +92,24 @@ body > section{
     animation: blink 1s step-start 0s infinite;
     -webkit-animation: blink 1s step-start 0s infinite;
 }
+
+#alien{
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    left: -10vw;
+    top: 24px;
+    z-index: 10;
+    animation: alien-r 10s linear;  
+}
+
+@keyframes alien-r {
+    0%{ left: -10vw; }
+    40%{ left: -10vw; }
+    100% { left: 110vw;}
+}
+@-webkit-keyframes alien-r {
+    0%{ left: -10vw; }
+    40%{ left: -10vw; }
+    100% { left: 110vw;}
+}
