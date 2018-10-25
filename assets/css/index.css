@@ -3,7 +3,10 @@
     --color-dark: #024059;
     --color-normal: #026773;
     --color-light: #027373;
+    --color-lighter: #ffffff;
     --color-main: #730C02;
+    --font-ubuntu: 'Ubuntu', sans-serif;
+    --font-cabin: 'Cabin', sans-serif;
 }     
 
 *{
@@ -11,32 +14,81 @@
 }
 
 html, body{
-    margin: 0;
     padding: 0;
+    margin: 0;
+    font-family: var(--font-cabin);
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+body > section{
+    z-index: 1;
+    position: relative;
+    min-height: 540px;
+    padding: 2em;
+}
+
+#my-name{
+    position: fixed;
+    left: 1em;
+    top: 1em;
+    color: var(--color-lighter);
+    font-weight: 400;
+    font-size: 1.5em;
+    letter-spacing: 0.11em;
+    font-family: var(--font-ubuntu);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    z-index: 10;
 }
 
 #introduction{
-    width: 100vw;
-    height: 100vh;
-}
-
-#introduction> div{
-    width: 100vw;
-    height: 20%;
-}
-
-#introduction > div:nth-child(1){
     background: var(--color-darker);
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#introduction > div:nth-child(2){
-    background: var(--color-dark);
+
+#introduction > .greetings{
+    padding: 12px 24px;
+    color: var(--color-lighter);
+    border: 1px solid var(--color-lighter);
+    font-size: 1.5em;
+    white-space: nowrap;
+    position: relative;
+    min-width: 5em;
 }
-#introduction > div:nth-child(3){
-    background: var(--color-normal);
+
+#introduction > .greetings::after{
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0.6em;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--color-lighter);
+    width: 0.1em;
+    height: 1em;
+    animation: blink 1s step-start 0s infinite;
+    -webkit-animation: blink 1s step-start 0s infinite;
+    -moz-animation:  blink 1s step-start 0s infinite;
+    -ms-animation:  blink 1s step-start 0s infinite;
 }
-#introduction > div:nth-child(4){
-    background: var(--color-light);
+
+@keyframes blink {
+    50% { opacity: 0.0; }
 }
-#introduction > div:nth-child(5){
-    background: var(--color-main);
+@-webkit-keyframes blink {
+    50% { opacity: 0.0; }
+}
+.blink {
+    animation: blink 1s step-start 0s infinite;
+    -webkit-animation: blink 1s step-start 0s infinite;
 }
