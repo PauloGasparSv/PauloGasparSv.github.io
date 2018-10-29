@@ -1,5 +1,5 @@
-const phrases = ['Sou fullstack developer', 'Desenvolvedor de jogos', 'Eu amo a Carol', 'Olá meu nome é Paulo'];
-let current_phrase = 0;
+const phrases = ['Sou fullstack', 'Desenvolvo jogos', 'Trabalho com...', 'NodeJs,...', 'PHP,...', 'C# ...', 'e Front', 'Desenvolvo projetos pessoais', 'Oi, meu nome é Paulo'];
+let current_phrase = phrases.length - 1;
 let curren_step = false;
 let current_char = phrases[phrases.length - 1].length;
 
@@ -13,9 +13,8 @@ window.onload = () => {
             addPhrase();
             return;
         }
-        setTimeout(() => removePhrase(), 30);
+        setTimeout(() => removePhrase(), 40);
     }
-
     function addPhrase(){
         current_char ++;
         document.querySelector('#introduction .greetings').innerHTML = phrases[current_phrase].substring(0, current_char);
@@ -23,8 +22,7 @@ window.onload = () => {
             setTimeout(() => removePhrase(), 2500);
             return;
         }
-        setTimeout(() => addPhrase(), 36);
+        setTimeout(() => addPhrase(), 40);
     }
-
     setTimeout(() => removePhrase(), 2500);
 }

@@ -59,11 +59,13 @@ body > section{
 #introduction > .greetings{
     padding: 12px 24px;
     color: var(--color-lighter);
-    border: 1px solid var(--color-lighter);
+    border: 2px solid var(--color-lighter);
     font-size: 1.5em;
-    white-space: nowrap;
+    white-space: nowrap;    
     position: relative;
     min-width: 5em;
+    box-shadow: 0 0 2px 1px #251d11;
+    text-shadow: 0px 0px 1px #909090;
 }
 
 #introduction > .greetings::after{
@@ -93,23 +95,24 @@ body > section{
     -webkit-animation: blink 1s step-start 0s infinite;
 }
 
-#alien{
-    width: 42px;
-    height: 42px;
+.space-invader{
+    border: 2px solid #fff;
+    background-color: #fff;
+    float: left;
+    width: 0.25em; 
+    height: 0.25em; 
+    margin: 40px 40px;
     position: absolute;
-    left: -10vw;
-    top: 24px;
     z-index: 10;
-    animation: alien-r 10s linear;  
+    left: -128px;
+    animation: 0.5s space-invader infinite, 5s go-right linear;
+    box-shadow: 0 0 0 .25em #fff, 0 .25em 0 .25em #fff,-.625em .375em 0 .125em #fff,.625em .375em 0 .125em #fff,-.75em -.75em 0 0 #fff,.75em -.75em 0 0 #fff,-.5em -.5em 0 0 #fff,.5em -.5em 0 0 #fff,-.75em -.25em 0 0 #fff,-.5em -.25em 0 0 #fff,.5em -.25em 0 0 #fff,.75em -.25em 0 0 #fff,-1em 0 0 0 #fff,-.75em 0 0 0 #fff,.75em 0 0 0 #fff,1em 0 0 0 #fff,-1em .25em 0 0 #fff,1em .25em 0 0 #fff,-.75em .75em 0 0 #fff,.75em .75em 0 0 #fff,/* Left Arm */1.25em .25em 0 0 #fff,1.25em .5em 0 0 #fff,1.25em .75em 0 0 #fff,/* Right Arm */-1.25em .25em 0 0 #fff,-1.25em .5em 0 0 #fff,-1.25em .75em 0 0 #fff,/* Left Foot */-.25em 1em 0 0 #fff,-.5em 1em 0 0 #fff,/* Right Foot */.25em 1em 0 0 #fff,.5em 1em 0 0 #fff;
 }
 
-@keyframes alien-r {
-    0%{ left: -10vw; }
-    40%{ left: -10vw; }
-    100% { left: 110vw;}
+@keyframes space-invader {
+    50% {box-shadow: 0 0 0 .25em #fff,0 .25em 0 .25em #fff,-.625em .375em 0 .125em #fff,.625em .375em 0 .125em #fff,        -.75em -.75em 0 0 #fff,        .75em -.75em 0 0 #fff,        -.5em -.5em 0 0 #fff,        .5em -.5em 0 0 #fff,        -.75em -.25em 0 0 #fff,        -.5em -.25em 0 0 #fff,.5em -.25em 0 0 #fff,        .75em -.25em 0 0 #fff,        -1em 0 0 0 #fff,        -.75em 0 0 0 #fff,        .75em 0 0 0 #fff,        1em 0 0 0 #fff,        -1em .25em 0 0 #fff,        1em .25em 0 0 #fff,        -.75em .75em 0 0 #fff,        .75em .75em 0 0 #fff,        /* Left Arm */        1.25em 0 0 0 #fff,        1.25em -.25em 0 0 #fff,        1.25em -.5em 0 0 #fff,        /* Right Arm */        -1.25em 0 0 0 #fff,         -1.25em -.25em 0 0 #fff,         -1.25em -.5em 0 0 #fff,         /* Left Foot */        -1em 1em 0 0 #fff,         -1em 1em 0 0 #fff,         /* Right Foot */        1em 1em 0 0 #fff,         1em 1em 0 0 #fff;}
 }
-@-webkit-keyframes alien-r {
-    0%{ left: -10vw; }
-    40%{ left: -10vw; }
-    100% { left: 110vw;}
+@keyframes go-right{
+    50%{left: -128px;}
+    100%{left: 120vw;}
 }
