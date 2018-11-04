@@ -201,18 +201,17 @@
     <script src="assets/js/particles.min.js"></script>
     <script src="assets/js/scripts.js"></script>
     <script>
-     (function() {
-        function size() {
-        // you can change here what you prefer
-        if (/android|webos|iphone|ipad|ipod|blackberry|nokia|opera mini|opera mobi|skyfire|maemo|windows phone|palm|iemobile|symbian|symbianos|fennec/i.test(navigator.userAgent.toLowerCase())) {
-            var theminheight = Math.min(document.documentElement.clientHeight, window.screen.height, window.innerHeight);
-            //now apply height ... if needed...add html & body ... i need and i use it
-            $('html body #yourelementofchoise').css('height', theminheight);
+     (function () {
+        function size () {
+            if (/android|webos|iphone|ipad|ipod|blackberry|nokia|opera mini|opera mobi|skyfire|maemo|windows phone|palm|iemobile|symbian|symbianos|fennec/i.test(navigator.userAgent.toLowerCase())) {
+                const theminheight = Math.min(document.documentElement.clientHeight, window.screen.height, window.innerHeight);
+                const particlesDiv = document.querySelector('#particles-js');
+                particlesDiv.style.height = `${theminheight}px`; 
+                particlesDiv.style.minHeight = `${theminheight}px`; 
+                particlesDiv.parentElement.style.bottom = 'auto';
+            }
         }
-        }
-        window.addEventListener('resize orientationchange', function() {
-        size();
-        }, false);
+        window.addEventListener('resize orientationchange', () => size(), false);
         size();
     }());
   </script>
