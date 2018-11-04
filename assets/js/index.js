@@ -1,28 +1,43 @@
-const phrases = ['Sou fullstack', 'Desenvolvo jogos', 'Trabalho com...', 'NodeJs,...', 'PHP,...', 'C# ...', 'e Front', 'Desenvolvo projetos pessoais', 'Oi, meu nome é Paulo'];
-let current_phrase = phrases.length - 1;
-let curren_step = false;
-let current_char = phrases[phrases.length - 1].length;
+const phrases = [
+	'Sou fullstack',
+	'Desenvolvo jogos',
+	'Odeio null pointer',
+	'Trabalho com Node',
+	'...e Php, C# e Front',
+	'Amo programar',
+	'Salvo Gatinhos de árvores',
+	'Faço vários projetos',
+	'Não sou designer ;-;',
+	'Bebo café demais',
+	'Oi, meu nome é Paulo'
+];
+
+let currentPhrase = phrases.length - 1;
+let currentChar = phrases[currentPhrase].length;
 
 window.onload = () => {
-    function removePhrase(){
-        current_char --;
-        document.querySelector('#introduction .greetings').innerHTML = phrases[current_phrase].substring(0, current_char);
-        if(current_char == 0){
-            current_phrase ++;
-            if(current_phrase > phrases.length - 1) current_phrase = 0;
-            addPhrase();
-            return;
-        }
-        setTimeout(() => removePhrase(), 40);
-    }
-    function addPhrase(){
-        current_char ++;
-        document.querySelector('#introduction .greetings').innerHTML = phrases[current_phrase].substring(0, current_char);
-        if(current_char == phrases[current_phrase].length + 1){
-            setTimeout(() => removePhrase(), 2500);
-            return;
-        }
-        setTimeout(() => addPhrase(), 40);
-    }
-    setTimeout(() => removePhrase(), 2500);
-}
+	
+	function removePhrase() {
+		currentChar -= 1;
+		document.querySelector('#introduction .greetings').innerHTML = phrases[currentPhrase].substring(0, currentChar);
+		if (currentChar === 0) {
+			currentPhrase += 1;
+			if (currentPhrase > phrases.length - 1) {
+				currentPhrase = 0;
+			}
+			return addPhrase();
+		}
+		setTimeout(() => removePhrase(), 40);
+	}
+
+	function addPhrase() {
+		currentChar++;
+		document.querySelector('#introduction .greetings').innerHTML = phrases[currentPhrase].substring(0, currentChar);
+		if (currentChar === phrases[currentPhrase].length + 1) {
+			return setTimeout(() => removePhrase(), 2500);
+		}
+		setTimeout(() => addPhrase(), 40);
+	}
+
+	setTimeout(() => removePhrase(), 2500);
+};

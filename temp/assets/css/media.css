@@ -1,0 +1,73 @@
+@media (max-width:575px) {
+
+    #hello .text-hello h1 {
+        font-size: 1.2rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .common-text h3 {
+        font-size: 1.1rem;
+    }
+
+    .common-text p {
+        font-size: .85rem;
+    }
+
+    #group2 .parallax__layer--fore {
+        background: rgba(243, 244, 247, 0.8);
+    }
+
+    #group2 .parallax__layer.parallax__layer--fore {
+        position: absolute;
+    }
+
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .common-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .common-text p {
+        font-size: .9rem;
+    }
+
+}
+
+@media (max-width:767px) {
+    .parallax__layer.parallax__layer--fore {
+        position: relative;
+    }
+
+    #group5 .parallax__layer--base {
+        min-height: 1050px;
+    }
+    #group4 {
+        min-height: 1000px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #group4 {
+        min-height: 800px
+    }
+}
+@media (min-width: 1400px) {
+    #hello img {
+        width: 350px;
+        box-shadow: 1px 4px 6px 1px #222;
+    }
+}
+@media (min-width:992px) and (max-width: 1199px){
+    #group5 .parallax__layer--base {
+        min-height: 860px;
+    }
+}
+@media (min-width: 1200px){
+    #group5 .parallax__layer--base {
+        min-height: 850px;
+    }
+}
