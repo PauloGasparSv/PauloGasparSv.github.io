@@ -59,7 +59,7 @@
                             </div>
                             <div class="col-sm-6 col-6 text-left">
                                 <div class="text-hello text-uppercase" data-aos="fade-left">
-                                    <h1 class="font2 text-white">2Olá, <br>eu sou a <br>
+                                    <h1 class="font2 text-white">3Olá, <br>eu sou a <br>
                                         <span class="fc-1">Rafaela</span>!<br>
                                         <span class="subtitle">
                                             Sou programadora
@@ -201,7 +201,7 @@
     <script src="assets/js/particles.min.js"></script>
     <script src="assets/js/scripts.js"></script>
     <script>
-     (function () {
+         (function () {
         function size () {
             if (/android|webos|iphone|ipad|ipod|blackberry|nokia|opera mini|opera mobi|skyfire|maemo|windows phone|palm|iemobile|symbian|symbianos|fennec/i.test(navigator.userAgent.toLowerCase())) {
                 const theminheight = Math.min(document.documentElement.clientHeight, window.screen.height, window.innerHeight);
@@ -209,6 +209,8 @@
                 particlesDiv.style.height = `${theminheight}px`; 
                 particlesDiv.style.minHeight = `${theminheight}px`; 
                 particlesDiv.parentElement.style.bottom = 'auto';
+                particlesDiv.parentElement.parentElement.style.height = `${theminheight}px`; 
+                particlesDiv.parentElement.parentElement.style.minHeight = `${theminheight}px`; 
             }
         }
         window.addEventListener('resize orientationchange', () => size(), false);
