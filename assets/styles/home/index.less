@@ -5,7 +5,7 @@
 html, body{
     padding: 0;
     margin: 0;
-    font-family: var(--font-cabin);
+    font-family: var(@font-cabin);
     width: 100%;
     height: 100%;
     max-width: 100vw;
@@ -24,11 +24,11 @@ body > section{
     position: fixed;
     left: 1em;
     top: 1em;
-    color: var(--color-lighter);
+    color: var(@color-lighter);
     font-weight: 400;
     font-size: 1.5em;
     letter-spacing: 0.11em;
-    font-family: var(--font-ubuntu);
+    font-family: var(@font-ubuntu);
     cursor: pointer;
     user-select: none;
     -webkit-user-select: none;
@@ -38,7 +38,7 @@ body > section{
 }
 
 #introduction{
-    background: var(--color-darker);
+    background: var(@color-darker);
     height: 90vh;
     display: flex;
     justify-content: center;
@@ -47,8 +47,8 @@ body > section{
 
 #introduction > .greetings{
     padding: 12px 24px;
-    color: var(--color-lighter);
-    border: 2px solid var(--color-lighter);
+    color: var(@color-lighter);
+    border: 2px solid var(@color-lighter);
     font-size: 1.5em;
     white-space: nowrap;    
     position: relative;
@@ -64,7 +64,7 @@ body > section{
     right: 0.6em;
     top: 50%;
     transform: translateY(-50%);
-    background: var(--color-lighter);
+    background: var(@color-lighter);
     width: 0.1em;
     height: 1em;
     animation: blink 1s step-start 0s infinite;
@@ -73,12 +73,7 @@ body > section{
     -ms-animation:  blink 1s step-start 0s infinite;
 }
 
-@keyframes blink {
-    50% { opacity: 0.0; }
-}
-@-webkit-keyframes blink {
-    50% { opacity: 0.0; }
-}
+
 .blink {
     animation: blink 1s step-start 0s infinite;
     -webkit-animation: blink 1s step-start 0s infinite;
@@ -96,12 +91,4 @@ body > section{
     left: -128px;
     animation: 0.5s space-invader infinite, 5s go-right linear;
     box-shadow: 0 0 0 .25em #fff, 0 .25em 0 .25em #fff,-.625em .375em 0 .125em #fff,.625em .375em 0 .125em #fff,-.75em -.75em 0 0 #fff,.75em -.75em 0 0 #fff,-.5em -.5em 0 0 #fff,.5em -.5em 0 0 #fff,-.75em -.25em 0 0 #fff,-.5em -.25em 0 0 #fff,.5em -.25em 0 0 #fff,.75em -.25em 0 0 #fff,-1em 0 0 0 #fff,-.75em 0 0 0 #fff,.75em 0 0 0 #fff,1em 0 0 0 #fff,-1em .25em 0 0 #fff,1em .25em 0 0 #fff,-.75em .75em 0 0 #fff,.75em .75em 0 0 #fff,/* Left Arm */1.25em .25em 0 0 #fff,1.25em .5em 0 0 #fff,1.25em .75em 0 0 #fff,/* Right Arm */-1.25em .25em 0 0 #fff,-1.25em .5em 0 0 #fff,-1.25em .75em 0 0 #fff,/* Left Foot */-.25em 1em 0 0 #fff,-.5em 1em 0 0 #fff,/* Right Foot */.25em 1em 0 0 #fff,.5em 1em 0 0 #fff;
-}
-
-@keyframes space-invader {
-    50% {box-shadow: 0 0 0 .25em #fff,0 .25em 0 .25em #fff,-.625em .375em 0 .125em #fff,.625em .375em 0 .125em #fff,        -.75em -.75em 0 0 #fff,        .75em -.75em 0 0 #fff,        -.5em -.5em 0 0 #fff,        .5em -.5em 0 0 #fff,        -.75em -.25em 0 0 #fff,        -.5em -.25em 0 0 #fff,.5em -.25em 0 0 #fff,        .75em -.25em 0 0 #fff,        -1em 0 0 0 #fff,        -.75em 0 0 0 #fff,        .75em 0 0 0 #fff,        1em 0 0 0 #fff,        -1em .25em 0 0 #fff,        1em .25em 0 0 #fff,        -.75em .75em 0 0 #fff,        .75em .75em 0 0 #fff,        /* Left Arm */        1.25em 0 0 0 #fff,        1.25em -.25em 0 0 #fff,        1.25em -.5em 0 0 #fff,        /* Right Arm */        -1.25em 0 0 0 #fff,         -1.25em -.25em 0 0 #fff,         -1.25em -.5em 0 0 #fff,         /* Left Foot */        -1em 1em 0 0 #fff,         -1em 1em 0 0 #fff,         /* Right Foot */        1em 1em 0 0 #fff,         1em 1em 0 0 #fff;}
-}
-@keyframes go-right{
-    50%{left: -128px;}
-    100%{left: 120vw;}
 }

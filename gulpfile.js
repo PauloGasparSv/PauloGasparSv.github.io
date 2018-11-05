@@ -26,7 +26,7 @@ const AUTOPREFIXER_BROWSERS = [
 gulp.task('clean', () => del(['public']));
 
 gulp.task('less', () =>
-    gulp.src('./assets/less/**/*.less')
+    gulp.src('./assets/styles/**/*.less')
     .pipe(less({paths: [ path.join(__dirname, 'less', 'includes') ]}))
     .pipe(gulp.dest('./public/css'))
 });
