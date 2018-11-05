@@ -1,0 +1,10 @@
+:root {
+    --color-darker: #0D0802;
+    --color-dark: #024059;
+    --color-normal: #026773;
+    --color-light: #027373;
+    --color-lighter: #ffffff;
+    --color-main: #730C02;
+    --font-ubuntu: 'Ubuntu', sans-serif;
+    --font-cabin: 'Cabin', sans-serif;
+}
