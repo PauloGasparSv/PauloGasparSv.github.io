@@ -13,11 +13,13 @@ html, body{
     overflow: hidden;
 }
 
-body > section{
-    z-index: 1;
-    position: relative;
-    min-height: 540px;
-    padding: 2em;
+body{
+    & > section{
+        z-index: 1;
+        position: relative;
+        min-height: 540px;
+        padding: 2em;
+    }
 }
 
 #my-name{
@@ -37,49 +39,42 @@ body > section{
     z-index: 10;
 }
 
-#introduction{
+#introduction {
     background: @color-darker;
     height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    & > .greetings {
+        padding: 12px 24px;
+        color: @color-lighter;
+        border: 2px solid @color-lighter;
+        font-size: 1.5em;
+        white-space: nowrap;    
+        position: relative;
+        min-width: 5em;
+        box-shadow: 0 0 2px 1px #251d11;
+        text-shadow: 0px 0px 1px #909090;
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            right: 0.6em;
+            top: 50%;
+            transform: translateY(-50%);
+            background: @color-lighter;
+            width: 0.1em;
+            height: 1em;
+            animation: blink 1s step-start 0s infinite;
+            -webkit-animation: blink 1s step-start 0s infinite;
+            -moz-animation:  blink 1s step-start 0s infinite;
+            -ms-animation:  blink 1s step-start 0s infinite;
+        }
+    }
 }
 
-#introduction > .greetings{
-    padding: 12px 24px;
-    color: @color-lighter;
-    border: 2px solid @color-lighter;
-    font-size: 1.5em;
-    white-space: nowrap;    
-    position: relative;
-    min-width: 5em;
-    box-shadow: 0 0 2px 1px #251d11;
-    text-shadow: 0px 0px 1px #909090;
-}
-
-#introduction > .greetings::after{
-    content: '';
-    display: block;
-    position: absolute;
-    right: 0.6em;
-    top: 50%;
-    transform: translateY(-50%);
-    background: @color-lighter;
-    width: 0.1em;
-    height: 1em;
-    animation: blink 1s step-start 0s infinite;
-    -webkit-animation: blink 1s step-start 0s infinite;
-    -moz-animation:  blink 1s step-start 0s infinite;
-    -ms-animation:  blink 1s step-start 0s infinite;
-}
-
-
-.blink {
-    animation: blink 1s step-start 0s infinite;
-    -webkit-animation: blink 1s step-start 0s infinite;
-}
-
-.space-invader{
+#space-invader{
     border: 2px solid #fff;
     background-color: #fff;
     float: left;
@@ -89,6 +84,11 @@ body > section{
     position: absolute;
     z-index: 10;
     left: -128px;
-    animation: 0.5s space-invader infinite, 5s go-right linear;
+    animation: 0.5s space-invader infinite, 1s go-right linear;
     box-shadow: 0 0 0 .25em #fff, 0 .25em 0 .25em #fff,-.625em .375em 0 .125em #fff,.625em .375em 0 .125em #fff,-.75em -.75em 0 0 #fff,.75em -.75em 0 0 #fff,-.5em -.5em 0 0 #fff,.5em -.5em 0 0 #fff,-.75em -.25em 0 0 #fff,-.5em -.25em 0 0 #fff,.5em -.25em 0 0 #fff,.75em -.25em 0 0 #fff,-1em 0 0 0 #fff,-.75em 0 0 0 #fff,.75em 0 0 0 #fff,1em 0 0 0 #fff,-1em .25em 0 0 #fff,1em .25em 0 0 #fff,-.75em .75em 0 0 #fff,.75em .75em 0 0 #fff,/* Left Arm */1.25em .25em 0 0 #fff,1.25em .5em 0 0 #fff,1.25em .75em 0 0 #fff,/* Right Arm */-1.25em .25em 0 0 #fff,-1.25em .5em 0 0 #fff,-1.25em .75em 0 0 #fff,/* Left Foot */-.25em 1em 0 0 #fff,-.5em 1em 0 0 #fff,/* Right Foot */.25em 1em 0 0 #fff,.5em 1em 0 0 #fff;
+}
+
+.blink {
+    animation: blink 1s step-start 0s infinite;
+    -webkit-animation: blink 1s step-start 0s infinite;
 }
