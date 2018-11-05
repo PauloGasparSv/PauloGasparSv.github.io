@@ -11,10 +11,12 @@
     "gulp-csso": "^3.0.1",
     "gulp-htmlmin": "^5.0.1",
     "gulp-less": "^4.0.1",
-    "gulp-uglify": "^3.0.1",
+    "gulp-uglify-es": "^1.0.4",
     "run-sequence": "^2.2.1"
   },
-  "scripts": {},
+  "scripts": {
+    "gulp": "gulp"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PauloGasparSv/PauloGasparSv.github.io.git"

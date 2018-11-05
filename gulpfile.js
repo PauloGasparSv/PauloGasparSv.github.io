@@ -7,7 +7,7 @@ const gulp = require('gulp');
 const htmlmin = require('gulp-htmlmin');
 const runSequence = require('run-sequence');
 const less = require('gulp-less');
-const uglify = require('gulp-uglify');
+const uglify = require('gulp-uglify-es').default;
 const path = require('path');
 
 const AUTOPREFIXER_BROWSERS = [
@@ -26,10 +26,10 @@ const AUTOPREFIXER_BROWSERS = [
 gulp.task('clean', () => del(['public']));
 
 gulp.task('less', () =>
-    gulp.src('./assets/styles/**/*.less')
+    gulp.src('./assets/styles/**/app.less')
     .pipe(less({paths: [ path.join(__dirname, 'less', 'includes') ]}))
     .pipe(gulp.dest('./public/css'))
-});
+);
 
 gulp.task('scripts', () => 
     gulp.src('./assets/js/**/*.js')
@@ -40,10 +40,7 @@ gulp.task('scripts', () =>
 gulp.task('pages', () =>
     gulp.src(['./**/*.html'])
     .pipe(htmlmin({collapseWhitespace: true, removeComments: true}))
-    .pipe(gulp.dest('./public'));
+    .pipe(gulp.dest('./public'))
 );
-  
 
-gulp.task('default', ['clean'], () =>
-    runSequence('less','scripts','pages')
-);
+gulp.task('default', gulp.parallel('less','scripts','pages'));
