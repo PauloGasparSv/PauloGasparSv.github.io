@@ -1,0 +1,34 @@
+{
+  "name": "paulogasparsv.github.io",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "main": "index.html",
+  "dependencies": {
+    "standard": "^12.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "browser-sync start --server --files \"*\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PauloGasparSv/PauloGasparSv.github.io.git"
+  },
+  "keywords": [
+    "website",
+    "portfolio",
+    "paulo",
+    "gaspar",
+    "sena",
+    "do",
+    "vale",
+    "developer"
+  ],
+  "author": "Paulo Vale",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PauloGasparSv/PauloGasparSv.github.io/issues"
+  },
+  "homepage": "https://github.com/PauloGasparSv/PauloGasparSv.github.io#readme"
+}
