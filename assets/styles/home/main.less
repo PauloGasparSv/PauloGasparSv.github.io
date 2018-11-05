@@ -5,7 +5,7 @@
 html, body{
     padding: 0;
     margin: 0;
-    font-family: var(@font-cabin);
+    font-family: @font-cabin;
     width: 100%;
     height: 100%;
     max-width: 100vw;
@@ -24,11 +24,11 @@ body > section{
     position: fixed;
     left: 1em;
     top: 1em;
-    color: var(@color-lighter);
+    color: @color-lighter;
     font-weight: 400;
     font-size: 1.5em;
     letter-spacing: 0.11em;
-    font-family: var(@font-ubuntu);
+    font-family: @font-ubuntu;
     cursor: pointer;
     user-select: none;
     -webkit-user-select: none;
@@ -38,7 +38,7 @@ body > section{
 }
 
 #introduction{
-    background: var(@color-darker);
+    background: @color-darker;
     height: 90vh;
     display: flex;
     justify-content: center;
@@ -47,8 +47,8 @@ body > section{
 
 #introduction > .greetings{
     padding: 12px 24px;
-    color: var(@color-lighter);
-    border: 2px solid var(@color-lighter);
+    color: @color-lighter;
+    border: 2px solid @color-lighter;
     font-size: 1.5em;
     white-space: nowrap;    
     position: relative;
@@ -64,7 +64,7 @@ body > section{
     right: 0.6em;
     top: 50%;
     transform: translateY(-50%);
-    background: var(@color-lighter);
+    background: @color-lighter;
     width: 0.1em;
     height: 1em;
     animation: blink 1s step-start 0s infinite;

@@ -1,0 +1,19 @@
+@media screen and (max-width: 540px){
+    #introduction{
+        .greetings {
+            padding: 8px 18px;
+            font-size: 1.2em;
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                right: 0.6em;
+                top: 50%;
+                transform: translateY(-50%);
+                background: @color-lighter;
+                width: 0.1em;
+                height: 1em;
+            }
+        }
+    }
+}
