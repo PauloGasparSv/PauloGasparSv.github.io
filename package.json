@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "My personal website",
   "main": "index.html",
-  "dependencies": {},
+  "dependencies": {
+    "browser-sync": "^2.26.3"
+  },
   "devDependencies": {
     "del": "^3.0.0",
     "gulp": "^4.0.0",
@@ -16,7 +18,7 @@
     "run-sequence": "^2.2.1"
   },
   "scripts": {
-    "gulp": "gulp watch"
+    "serve": "gulp watch-and-serve"
   },
   "repository": {
     "type": "git",
