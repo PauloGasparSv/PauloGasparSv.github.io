@@ -3,7 +3,7 @@
 }
 body {
     // overflow-x: hidden;
-    background: black;
+    background: @color-darker;
     font-family: @font-primary;
     padding: 0;
     margin: 0;
@@ -11,8 +11,8 @@ body {
 #color-pallet {
     cursor: pointer;
     position: fixed;
-    right: 16px;
-    top: 16px;
+    right: 20px;
+    top: 20px;
     width: 36px;
     height: 36px;
     border-radius: 8px;
@@ -20,11 +20,11 @@ body {
     flex-direction: column;
     transition: 0.4s;
     &:active, &:hover {
-        width: 92px;
-        height: 92px;
+        width: 96px;
+        height: 96px;
         opacity: 1;
-        top: 32px;
-        right: 32px;
+        top: 24px;
+        right: 28px;
         &::after {
             content: 'Color Pallete by Carolina Almeida';
             text-align: center;
