@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: black;
+  font-family: 'Ubuntu', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+#color-pallet {
+  cursor: pointer;
+  position: fixed;
+  right: 16px;
+  top: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.4s;
+}
+#color-pallet:active,
+#color-pallet:hover {
+  width: 92px;
+  height: 92px;
+  opacity: 1;
+  top: 32px;
+  right: 32px;
+}
+#color-pallet:active::after,
+#color-pallet:hover::after {
+  content: 'Color Pallete by Carolina Almeida';
+  text-align: center;
+  position: absolute;
+  top: 100%;
+  padding-top: 8px;
+  display: block;
+  color: #f5f1f1;
+  font-size: 12px;
+  left: 50%;
+  width: 128px;
+  transform: translateX(-50%);
+}
+#color-pallet span {
+  flex-grow: 1;
+  flex-basis: auto;
+  position: relative;
+}
+#color-pallet span:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background: #f5f1f1;
+}
+#color-pallet span:nth-child(2) {
+  background: #027373;
+}
+#color-pallet span:nth-child(3) {
+  background: #026773;
+}
+#color-pallet span:nth-child(4) {
+  background: #024059;
+}
+#color-pallet span:nth-child(5) {
+  background: #730C02;
+}
+#color-pallet span:last-child {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background: #0D0802;
+}
+#color-pallet span span {
+  display: none;
+}
+#color-pallet span:active span,
+#color-pallet span:hover span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -80px;
+  top: 100%;
+  transform: translateY(-50%);
+  width: 64px;
+  height: 64px;
+  background: inherit;
+  font-size: 14px;
+  border-radius: 8px;
+}
+#introduction {
+  position: relative;
+  max-width: 100vw;
+  width: 100%;
+  height: 95vh;
+}
+#introduction .background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  background-color: #0e110f;
+  background-position: center;
+  background-size: cover;
+  filter: blur(2px) brightness(40%);
+  animation: show-background 1s forwards;
+}
+@media screen and (max-width: 720px) {
+  #introduction {
+    height: 80vh;
+  }
+}
+@keyframes show-background {
+  from {
+    filter: blur(3px) brightness(20%);
+  }
+  to {
+    filter: blur(1px) brightness(60%);
+  }
+}
