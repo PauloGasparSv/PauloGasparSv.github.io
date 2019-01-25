@@ -88,10 +88,13 @@ body {
         top: 0;
         bottom: 0;
         z-index: 0;
-        background-color: #0e110f;
+        opacity: 0;
+        background-color: @color-darker;
         background-position: center;
         background-size: cover;
         filter: blur(2px) brightness(40%);
-        animation: show-background 1s forwards;
+        &.show {
+            animation: show-background 1.2s forwards;
+        }
     }
 }

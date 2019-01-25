@@ -4,22 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
     <style>
-        #introduction > .background {
-            background-image: url('public/images/table-computer-compressed.jpg');
+        /* Planning on async loading the css files. */
+        #loader {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            background-color: #030200;
+        }
+        #loader > .right-brackets {
+            display: block;
+            position: relative;
+            width: 32px;
+            height: 8px;
+            transform: rotate(45deg);
+            background: #f5f1f1;
+            margin-left: 4px; 
+            margin-bottom: 16px;
+            animation: go-right 0.6s forwards ease;
+            animation-delay: 0.4s;
+        }
+        #loader > .right-brackets::after {
+            content: '';
+            position: absolute;
+            display: block;
+            left: 12px;
+            top: 12px;
+            width: 32px;
+            height: 8px;
+            transform: rotate(90deg);
+            background: #f5f1f1;
+        }
+        #loader > .left-brackets {
+            display: block;
+            position: relative;
+            width: 32px;
+            height: 8px;
+            transform: rotate(225deg);
+            background: #f5f1f1;
+            margin-right: 4px; 
+            margin-top: 16px;
+            animation: go-left 0.6s forwards ease;
+            animation-delay: 0.4s;
+        }
+        #loader > .left-brackets::after {
+            content: '';
+            position: absolute;
+            display: block;
+            left: 12px;
+            top: 12px;
+            width: 32px;
+            height: 8px;
+            transform: rotate(90deg);
+            background: #f5f1f1;
+        }
+        @keyframes go-right {
+           from { margin-left: 4px; opacity: 1;}
+           to { margin-left: 64px; opacity: 0 } 
+        }
+        @keyframes go-left {
+           from { margin-right: 4px; opacity: 1;}
+           to { margin-right: 64px; opacity: 0;} 
         }
     </style>
-
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cabin:500,700" rel="stylesheet">
     <link rel="stylesheet" href="public/css/home/app.css">
-    <script src="public/js/home/index.js"></script>
+    <script defer src="public/js/main.js"></script>
     <title>Paulo Gaspar Sena do Vale</title>
 </head>
 <body>
+    <div id="loader">
+        <span class="left-brackets"></span>
+        <span class="right-brackets"></span>
+    </div>
     <section id="introduction">
-        <div class="background"></div>
+        <div class="background" data-src="./public/images/table-computer-compressed.jpg"></div>
         <div id="color-pallet">
             <span><span>#f5f1f1</span></span>
             <span><span>#027373</span></span>
@@ -32,4 +98,27 @@
     <br><br><br><br>
     v1.0
 </body>
+<script>
+    //Async loading the background image.
+    const background = document.querySelector('#introduction>.background');
+    const backgroundImage = new Image();
+    const initTime = Date.now();
+    backgroundImage.src = background.getAttribute('data-src');
+    backgroundImage.onload = function() {
+        const loader = document.querySelector("#loader");
+        background.style.backgroundImage = `url('${this.src}')`;
+        // Forcing the animations to play.
+        if(Date.now() - initTime > 1000) {
+            background.classList.add('show');
+            loader.style.display = 'none';
+            loader.remove();
+        } else {
+            setTimeout(() => {
+                background.classList.add('show');
+                loader.style.display = 'none';
+                loader.remove();
+            }, 1000 - (Date.now() - initTime))
+        }
+    };
+</script>
 </html>

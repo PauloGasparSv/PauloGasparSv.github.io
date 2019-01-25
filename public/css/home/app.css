@@ -99,11 +99,14 @@ body {
   top: 0;
   bottom: 0;
   z-index: 0;
-  background-color: #0e110f;
+  opacity: 0;
+  background-color: #030200;
   background-position: center;
   background-size: cover;
   filter: blur(2px) brightness(40%);
-  animation: show-background 1s forwards;
+}
+#introduction .background.show {
+  animation: show-background 1.2s forwards;
 }
 @media screen and (max-width: 720px) {
   #introduction {
@@ -112,9 +115,11 @@ body {
 }
 @keyframes show-background {
   from {
+    opacity: 0;
     filter: blur(3px) brightness(20%);
   }
   to {
+    opacity: 1;
     filter: blur(1px) brightness(60%);
   }
 }
