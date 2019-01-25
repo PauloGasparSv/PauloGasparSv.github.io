@@ -6,6 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <style>
         /* Planning on async loading the css files. */
+        * {
+            box-sizing: border-box;
+        }
+        #introduction {
+            position: relative;
+            max-width: 100vw;
+            width: 100%;
+            height: 95vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
+        #introduction  .background {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+            opacity: 0;
+            background-position: center;
+            background-size: cover;
+        }
+        body {
+            background: #030200;
+            padding: 0;
+            margin: 0;
+        }
         #loader {
             position: fixed;
             left: 0;
@@ -84,18 +113,29 @@
         <span class="left-brackets"></span>
         <span class="right-brackets"></span>
     </div>
+    <div id="color-pallet">
+        <span><span>#f5f1f1</span></span>
+        <span><span>#027373</span></span>
+        <span><span>#026773</span></span>
+        <span><span>#024059</span></span>
+        <span><span>#730C02</span></span>
+        <span><span>#0D0802</span></span>
+    </div>
     <section id="introduction">
-        <div class="background" data-src="./public/images/table-computer-compressed.jpg"></div>
-        <div id="color-pallet">
-            <span><span>#f5f1f1</span></span>
-            <span><span>#027373</span></span>
-            <span><span>#026773</span></span>
-            <span><span>#024059</span></span>
-            <span><span>#730C02</span></span>
-            <span><span>#0D0802</span></span>
-        </div>
+        <div class="background" data-src="./public/images/notebook-dark.jpeg"></div>
+        <h1>Oi meu nome é Paulo</h1>
+        <!-- <div class="profile-card">
+            <div class="img-container">
+                <img src="./public/images/profile_2.png" alt="" width="200" height="200">
+            </div>
+        </div> -->
     </section>
-    <br><br><br><br>
+    <section>
+        Hello <br> Hello <br> Hello <br> Hello <br> Hello <br>
+        Hello <br> Hello <br> Hello <br> Hello <br> Hello <br>
+        Hello <br> Hello <br> Hello <br> Hello <br> Hello <br>
+        Hello <br> Hello <br> Hello <br> Hello <br> Hello <br>
+    </section>
     v1.1
 </body>
 <script>
@@ -109,12 +149,12 @@
         background.style.backgroundImage = `url('${this.src}')`;
         // Forcing the animations to play.
         if(Date.now() - initTime > 1000) {
-            background.classList.add('show');
+            document.querySelector('#introduction').classList.add('show');
             loader.style.display = 'none';
             loader.remove();
         } else {
             setTimeout(() => {
-                background.classList.add('show');
+                document.querySelector('#introduction').classList.add('show');
                 loader.style.display = 'none';
                 loader.remove();
             }, 1000 - (Date.now() - initTime))
