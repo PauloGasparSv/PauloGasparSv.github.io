@@ -89,28 +89,37 @@ body {
   border-radius: 8px;
 }
 .down-arrow {
-  position: relative;
-  width: 72px;
-  height: 72px;
-}
-.down-arrow .content {
-  display: block;
   position: absolute;
-  width: 36px;
-  height: 6px;
-  transform: rotate(135deg);
-  background: #f5f1f1;
+  bottom: 8px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 50%;
+  transition: 0.2s;
+  opacity: 0.4;
 }
-.down-arrow .content::after {
+.down-arrow:hover {
+  opacity: 0.8;
+  bottom: -8px;
+}
+.down-arrow .bottom {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  border: 0.25em solid #f5f1f1;
+  border-radius: 50%;
+  text-align: center;
+}
+.down-arrow .bottom::after {
   content: '';
-  position: absolute;
-  display: block;
-  left: 15px;
-  top: 15px;
-  width: 36px;
-  height: 6px;
-  transform: rotate(90deg);
-  background: #f5f1f1;
+  display: inline-block;
+  margin-top: 0.42em;
+  width: 1em;
+  height: 1em;
+  border-top: 0.2em solid #f5f1f1;
+  border-right: 0.2em solid #f5f1f1;
+  -moz-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
 }
 #introduction h1 {
   font-size: 1.8em;

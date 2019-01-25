@@ -76,28 +76,37 @@ body {
 }
 
 .down-arrow {
-    position: relative;
-    width: 72px;
-    height: 72px;
-    .content {
-        display: block;
-        position: absolute;
-        width: 36px;
-        height: 6px;
-        transform: rotate(135deg);
-        background: #f5f1f1;
+    position: absolute;
+    bottom:  8px;
+    text-align: center;    
+    display: inline-block;
+    border-radius: 50%;
+    transition: 0.2s;
+    opacity: 0.4;
+    &:hover {
+        opacity: 0.8;
+        bottom: -8px;
+    }
+    .bottom { 
+        display: inline-block;
+        width: 3em;
+        height: 3em;
+        border: 0.25em solid @color-light;
+        border-radius: 50%;
+        text-align: center;
         &::after {
             content: '';
-            position: absolute;
-            display: block;
-            left: 15px;
-            top: 15px;
-            width: 36px;
-            height: 6px;
-            transform: rotate(90deg);
-            background: #f5f1f1;
-        }
+            display: inline-block;
+            margin-top: 0.42em;
+            width: 1em;
+            height: 1em;
+            border-top: 0.2em solid @color-light;
+            border-right: 0.2em solid @color-light;
+            -moz-transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
     }
+  }
 }
 
 #introduction {
