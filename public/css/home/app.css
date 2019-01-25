@@ -48,7 +48,7 @@ body {
   background: #f5f1f1;
 }
 #color-pallet span:nth-child(2) {
-  background: #027373;
+  background: #039e9e;
 }
 #color-pallet span:nth-child(3) {
   background: #026773;
@@ -57,7 +57,13 @@ body {
   background: #024059;
 }
 #color-pallet span:nth-child(5) {
+  background: #b41d0f;
+}
+#color-pallet span:nth-child(6) {
   background: #730C02;
+}
+#color-pallet span:nth-child(7) {
+  background: #4d0600;
 }
 #color-pallet span:last-child {
   border-bottom-left-radius: 8px;
@@ -82,13 +88,37 @@ body {
   font-size: 14px;
   border-radius: 8px;
 }
+.down-arrow {
+  position: relative;
+  width: 72px;
+  height: 72px;
+}
+.down-arrow .content {
+  display: block;
+  position: absolute;
+  width: 36px;
+  height: 6px;
+  transform: rotate(135deg);
+  background: #f5f1f1;
+}
+.down-arrow .content::after {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 15px;
+  top: 15px;
+  width: 36px;
+  height: 6px;
+  transform: rotate(90deg);
+  background: #f5f1f1;
+}
 #introduction h1 {
   font-size: 1.8em;
   margin-bottom: 0;
   padding: 18px 24px;
   background-color: rgba(13, 8, 2, 0.85);
-  border: 3px solid #027373;
-  color: #027373;
+  border: 3px solid #039e9e;
+  color: #039e9e;
   opacity: 0;
 }
 #introduction .profile-card {

@@ -47,7 +47,9 @@ body {
         &:nth-child(2){ background: @color-blue-light }
         &:nth-child(3){ background: @color-blue }
         &:nth-child(4){ background: @color-blue-dark }
-        &:nth-child(5){ background: @color-red }
+        &:nth-child(5){ background: @color-red-light }
+        &:nth-child(6){ background: @color-red }
+        &:nth-child(7){ background: @color-red-dark }
         &:last-child {
             border-bottom-left-radius: 8px;
             border-bottom-right-radius: 8px;
@@ -72,6 +74,32 @@ body {
         }
     }
 }
+
+.down-arrow {
+    position: relative;
+    width: 72px;
+    height: 72px;
+    .content {
+        display: block;
+        position: absolute;
+        width: 36px;
+        height: 6px;
+        transform: rotate(135deg);
+        background: #f5f1f1;
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            left: 15px;
+            top: 15px;
+            width: 36px;
+            height: 6px;
+            transform: rotate(90deg);
+            background: #f5f1f1;
+        }
+    }
+}
+
 #introduction {
     h1 {
         font-size: 1.8em;
