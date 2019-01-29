@@ -39,3 +39,9 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }, 500)
 });
+
+window.addEventListener('scroll', () => {
+    if(window.scrollY > 150) {
+        document.querySelector('#timeline > div').classList.add('active');
+    }
+})

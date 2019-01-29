@@ -74,7 +74,6 @@ body {
         }
     }
 }
-
 .down-arrow {
     position: absolute;
     bottom:  8px;
@@ -108,7 +107,6 @@ body {
     }
   }
 }
-
 #introduction {
     h1 {
         font-size: 1.8em;
@@ -160,12 +158,90 @@ body {
         }
     }
 }
-
 #about {
     .avatar {
         width: 200px;
         height: 200px;
         border-radius: 50%;
         transform: rotate(-20deg);
+    }
+}
+#timeline {
+    max-width: 600px;
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    padding: 64px 0;
+    & > div {
+        min-height: inherit;
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 4fr 5px 4fr;
+
+        &.active {
+            span {
+                opacity: 1;
+            }
+            .branch {
+                width: 100%;
+            }
+        }
+        
+        .trunk {
+            grid-column-start: 2;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            background: @color-light;
+        }
+        & > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: @color-light;
+
+            &.right {
+                grid-column: 3;
+                padding-right: 32px;
+                .branch {
+                    align-self: flex-start;
+                    border-top-right-radius: 4px;
+                    border-bottom-right-radius: 4px;
+                }
+            }
+            &.left {
+                grid-column: 1;
+                padding-left: 32px;
+                .branch {
+                    align-self: flex-end;
+                    border-top-left-radius: 4px;
+                    border-bottom-left-radius: 4px;
+                }
+            }
+            
+            &:nth-child(2) { grid-row: 1; .branch { background: @color-red-light; transition: 1s; } }
+            &:nth-child(3) { grid-row: 2; .branch { background: @color-red; transition: 1.5s; } }
+            &:nth-child(4) { grid-row: 3; .branch { background: @color-blue-light; transition: 1.8s; } }
+            &:nth-child(5) { grid-row: 4; .branch { background: @color-light; transition: 2.1s; } }
+            &:nth-child(6) { grid-row: 5; .branch { background: @color-blue; transition: 2.5s;} }
+            
+            span {
+                opacity: 0;
+                transition: 1.5s;
+                padding-bottom: 16px;
+            }
+            .branch {
+                width: 0;
+                height: 4px;
+                background: @color-light;
+            }
+        }
     }
 }
