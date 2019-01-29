@@ -124,10 +124,14 @@ body {
 #introduction h1 {
   font-size: 1.8em;
   margin-bottom: 0;
-  padding: 18px 24px;
+  transition: 0.4s;
+  padding: 0.6em 1.2em;
   background-color: rgba(13, 8, 2, 0.85);
   border: 3px solid #039e9e;
+  border-radius: 8px;
   color: #039e9e;
+  min-width: 64px;
+  min-height: 2.6em;
   opacity: 0;
 }
 #introduction .profile-card {
@@ -164,9 +168,34 @@ body {
   animation: show-up-margin 1.2s forwards;
   animation-delay: 1s;
 }
+#about .avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transform: rotate(-20deg);
+}
 @media screen and (max-width: 720px) {
   #introduction {
     height: 80vh;
+  }
+  #introduction h1 {
+    padding: 0.5em 1em;
+    font-size: 1.3em;
+    min-height: 2em;
+  }
+}
+@media screen and (max-width: 548px) {
+  #introduction h1 {
+    padding: 0.4em 0.8em;
+    font-size: 1.2em;
+    min-height: 1.8em;
+  }
+}
+@media screen and (max-width: 350px) {
+  #introduction h1 {
+    padding: 0.35em 0.7em;
+    font-size: 1em;
+    min-height: 1.7em;
   }
 }
 @keyframes show-background {
