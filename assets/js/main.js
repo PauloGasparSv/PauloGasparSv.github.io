@@ -41,7 +41,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('scroll', () => {
-    if(window.scrollY > 150) {
+    if(window.scrollY > document.querySelector('#introduction').offsetHeight / 2) {
         document.querySelector('#timeline > div').classList.add('active');
     }
 })
