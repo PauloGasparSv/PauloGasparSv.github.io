@@ -177,7 +177,7 @@ body {
         display: grid;
         width: 100%;
         height: 100%;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-columns: 4fr 5px 4fr;
 
         &.active {
@@ -186,6 +186,9 @@ body {
             }
             .branch {
                 width: 100%;
+            }
+            .trunk {
+                height: 100%;
             }
             .right {
                 span {
@@ -212,14 +215,16 @@ body {
         }
         
         .trunk {
+            transition: 2s;
             grid-column: 2;
             grid-row-start: 2;
-            grid-row-end: 7 ;
+            grid-row-end: 8;
             display: flex;
             justify-content: center;
             align-items: center;
             border-radius: 4px;
-            background: @color-light;
+            height: 0;
+            background: linear-gradient(@color-light, @color-red-light);
         }
         & > div {
             display: flex;
