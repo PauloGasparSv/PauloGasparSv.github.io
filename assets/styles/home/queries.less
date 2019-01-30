@@ -1,5 +1,9 @@
-#introduction {
-    @media screen and (max-width: 720px) {
+/* 
+    TODO: Responsive timeline
+*/
+
+@media screen and (max-width: 720px) {
+    #introduction {
         height: 80vh;
         h1 {
             padding: 0.5em 1em;
@@ -7,18 +11,41 @@
             min-height: 2em;
         }
     }
-    @media screen and (max-width: 548px) {
+    #about {
+        .avatar {
+            width: 130px;
+            height: 130px;
+        }
+    }
+}
+@media screen and (max-width: 548px) {
+    #introduction {
         h1 {
             padding: 0.4em 0.8em;
             font-size: 1.2em;
             min-height: 1.8em;
         }
     }
-    @media screen and (max-width: 350px) {
+    #about {
+        .avatar {
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+@media screen and (max-width: 350px) {
+    #introduction {
         h1 {
             padding: 0.35em 0.7em;
             font-size: 1em;
             min-height: 1.7em;
         }
     }
+    #about {
+        .avatar {
+            width: 85px;
+            height: 85px;
+        }
+    }
 }
+

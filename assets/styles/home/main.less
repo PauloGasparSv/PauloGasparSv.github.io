@@ -31,7 +31,8 @@ body {
             color: @color-light;
             font-size: 12px;
             left: 50%;
-            width: 128px;
+            width: 100%;
+            max-width: 128px;
             transform: translateX(-50%);
         }
     }
@@ -159,11 +160,32 @@ body {
     }
 }
 #about {
+    position: relative;
+    min-height: 50vh;
+    background-color: @color-dark;
     .avatar {
-        width: 200px;
-        height: 200px;
+        position: absolute;
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
-        transform: rotate(-20deg);
+        transform: rotate(-25deg) translateX(-50%);
+        opacity: 0;
+        top: 64px;
+        left: 0px;
+        animation: appear-rotating 1s forwards;
+        animation-delay: 2s;
+    }
+    @keyframes appear-rotating {
+        from { 
+            left: -0;
+            opacity: 0;
+            transform: rotate(-25deg) translateX(-50%);
+        } 
+        to {
+            left: 25%;
+            opacity: 1;
+            transform: rotate(10deg) translateX(-50%);
+        }
     }
 }
 #timeline {
@@ -171,7 +193,7 @@ body {
     margin: auto;
     width: 100%;
     min-height: 100vh;
-    padding: 64px 0;
+    padding: 64px 32px;
     & > div {
         min-height: inherit;
         display: grid;

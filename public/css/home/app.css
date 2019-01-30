@@ -34,7 +34,8 @@ body {
   color: #f5f1f1;
   font-size: 12px;
   left: 50%;
-  width: 128px;
+  width: 100%;
+  max-width: 128px;
   transform: translateX(-50%);
 }
 #color-pallet span {
@@ -168,18 +169,41 @@ body {
   animation: show-up-margin 1.2s forwards;
   animation-delay: 1s;
 }
+#about {
+  position: relative;
+  min-height: 50vh;
+  background-color: #0D0802;
+}
 #about .avatar {
-  width: 200px;
-  height: 200px;
+  position: absolute;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  transform: rotate(-20deg);
+  transform: rotate(-25deg) translateX(-50%);
+  opacity: 0;
+  top: 64px;
+  left: 0px;
+  animation: appear-rotating 1s forwards;
+  animation-delay: 2s;
+}
+@keyframes appear-rotating {
+  from {
+    left: 0;
+    opacity: 0;
+    transform: rotate(-25deg) translateX(-50%);
+  }
+  to {
+    left: 25%;
+    opacity: 1;
+    transform: rotate(10deg) translateX(-50%);
+  }
 }
 #timeline {
   max-width: 600px;
   margin: auto;
   width: 100%;
   min-height: 100vh;
-  padding: 64px 0;
+  padding: 64px 32px;
 }
 #timeline > div {
   min-height: inherit;
@@ -324,6 +348,9 @@ body {
 #timeline > div > div .branch::before {
   border-right-color: #f5f1f1;
 }
+/* 
+    TODO: Responsive timeline
+*/
 @media screen and (max-width: 720px) {
   #introduction {
     height: 80vh;
@@ -333,6 +360,10 @@ body {
     font-size: 1.3em;
     min-height: 2em;
   }
+  #about .avatar {
+    width: 130px;
+    height: 130px;
+  }
 }
 @media screen and (max-width: 548px) {
   #introduction h1 {
@@ -340,12 +371,20 @@ body {
     font-size: 1.2em;
     min-height: 1.8em;
   }
+  #about .avatar {
+    width: 100px;
+    height: 100px;
+  }
 }
 @media screen and (max-width: 350px) {
   #introduction h1 {
     padding: 0.35em 0.7em;
     font-size: 1em;
     min-height: 1.7em;
+  }
+  #about .avatar {
+    width: 85px;
+    height: 85px;
   }
 }
 @keyframes show-background {
