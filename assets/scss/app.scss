@@ -50,6 +50,8 @@ body {
     .subtitle {
         font-size: 1.5rem;
         margin-bottom: 16px;
+        max-width: 80vw;
+        text-align: center;
     }
     .division {
         margin-bottom: 24px;
@@ -91,5 +93,24 @@ body {
     to {
         transform: none;
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    #introduction {
+        .avatar {
+            width: 120px;
+            height: 120px;
+        }
+        .subtitle {
+            font-size: 1rem;
+        }
+        .social {
+            width: 128px;
+            img {
+                width: 28px;
+                height: 28px;
+            }
+        }
     }
 }
