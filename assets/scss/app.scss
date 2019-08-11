@@ -38,6 +38,7 @@ body {
         box-shadow: 2px 2px 4px 4px rgba(0,0,0,0.3);
         img {
             width: 110%;
+            transform: translateX(-8px);
             transition: 0.5s;
             filter: grayscale(30%);
         }
@@ -222,6 +223,9 @@ body {
         .avatar {
             width: 120px;
             height: 120px;
+            img {
+                transform: translateX(-4px);
+            }
         }
         .subtitle {
             font-size: 1rem;
