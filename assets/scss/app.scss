@@ -19,6 +19,11 @@ body {
     align-items: center;
     flex-direction: column;
     color: #fff;
+    & > * {
+        animation: show-up 1s forwards;
+        animation-delay: 1.8s;
+        opacity: 0;
+    }
     .avatar {
         overflow: hidden;
         width: 180px;
@@ -28,6 +33,7 @@ body {
         justify-content: center;
         align-items: center;
         margin-bottom: 32px;
+        transition: 1s;
         box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.3);
         img {
             width: 110%;
@@ -36,17 +42,17 @@ body {
         }
         &:hover {
             img {
-                width: 120%;
+                width: 125%;
                 filter: grayscale(30%) blur(1px);
             }
         }
     }
     .subtitle {
         font-size: 1.5rem;
-        margin-bottom: 8px;
+        margin-bottom: 16px;
     }
     .division {
-        margin-bottom: 16px;
+        margin-bottom: 24px;
     }
     .social {
         display: flex;
@@ -74,5 +80,16 @@ body {
     margin: 8px 0;
     &.sm {
         width: 128px;
+    }
+}
+
+@keyframes show-up {
+    from {
+        transform: translateY(16px);
+        opacity: 0;
+    }
+    to {
+        transform: none;
+        opacity: 1;
     }
 }
