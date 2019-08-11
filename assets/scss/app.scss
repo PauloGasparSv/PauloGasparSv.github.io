@@ -1,13 +1,12 @@
 @import "variables";
-@import url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap');
 
 * { box-sizing: border-box; }
 
 body {
-    background:#e2e2e2;
+    background:#fff;
     padding: 0;
     margin: 0;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Lexend Deca',sans-serif;
 }
 
 #introduction {
@@ -19,7 +18,9 @@ body {
     align-items: center;
     flex-direction: column;
     color: #fff;
-    & > * {
+    position: relative;
+    overflow: hidden;
+    & > *:not(.space-invader) {
         animation: show-up 1s forwards;
         animation-delay: 1.8s;
         opacity: 0;
@@ -34,7 +35,7 @@ body {
         align-items: center;
         margin-bottom: 32px;
         transition: 1s;
-        box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.3);
+        box-shadow: 2px 2px 4px 4px rgba(0,0,0,0.3);
         img {
             width: 110%;
             transition: 0.5s;
@@ -72,6 +73,33 @@ body {
             }
         }
     }
+    .space-invader {
+        position: absolute;
+        top: 8px;
+        left: -64px;
+        animation-name: space-invader, invader-go-right;
+        animation-fill-mode: none, forwards;
+        animation-duration: 1s, 4s;
+        animation-iteration-count: infinite, 1;
+        animation-timing-function: ease-in-out, linear;
+        animation-delay: 0s, 4s;
+    }
+}
+
+#works {
+    background: #fff;
+    width: 100vw;
+    padding: 0 8px;
+}
+
+#experience {
+    background: #222;
+    width: 100vw;
+}
+
+#credits {
+    background: #e2e2e2;
+    width: 100vw;
 }
 
 .division {
@@ -83,6 +111,96 @@ body {
     &.sm {
         width: 128px;
     }
+}
+
+.space-invader {
+    border: 2px solid #fff;
+    background-color: #fff;
+    float: left;
+    width: 0.25em;
+    height: 0.25em;
+    margin: 40px 40px;
+    box-shadow:
+        0 0 0 .25em #fff,
+        0 .25em 0 .25em #fff,
+        -.625em .375em 0 .125em #fff,
+        .625em .375em 0 .125em #fff,
+        -.75em -.75em 0 0 #fff,
+        .75em -.75em 0 0 #fff,
+        -.5em -.5em 0 0 #fff,
+        .5em -.5em 0 0 #fff,
+        -.75em -.25em 0 0 #fff,
+        -.5em -.25em 0 0 #fff,
+        .5em -.25em 0 0 #fff,
+        .75em -.25em 0 0 #fff,
+        -1em 0 0 0 #fff,
+        -.75em 0 0 0 #fff,
+        .75em 0 0 0 #fff,
+        1em 0 0 0 #fff,
+        -1em .25em 0 0 #fff,
+        1em .25em 0 0 #fff,
+        -.75em .75em 0 0 #fff,
+        .75em .75em 0 0 #fff,
+        /* Left Arm */
+        1.25em .25em 0 0 #fff,
+        1.25em .5em 0 0 #fff,
+        1.25em .75em 0 0 #fff,
+        /* Right Arm */
+        -1.25em .25em 0 0 #fff,
+        -1.25em .5em 0 0 #fff,
+        -1.25em .75em 0 0 #fff,
+        /* Left Foot */
+        -.25em 1em 0 0 #fff,
+        -.5em 1em 0 0 #fff,
+        /* Right Foot */
+        .25em 1em 0 0 #fff,
+        .5em 1em 0 0 #fff;
+    animation: 1s space-invader infinite;
+}
+
+@keyframes invader-go-right {
+    from { left: -64px }
+    to { left: 105vw; }
+}
+
+@keyframes space-invader {
+  50% {
+    box-shadow:
+      0 0 0 .25em #fff,
+      0 .25em 0 .25em #fff,
+      -.625em .375em 0 .125em #fff,
+      .625em .375em 0 .125em #fff,
+      -.75em -.75em 0 0 #fff,
+      .75em -.75em 0 0 #fff,
+      -.5em -.5em 0 0 #fff,
+      .5em -.5em 0 0 #fff,
+      -.75em -.25em 0 0 #fff,
+      -.5em -.25em 0 0 #fff,
+      .5em -.25em 0 0 #fff,
+      .75em -.25em 0 0 #fff,
+      -1em 0 0 0 #fff,
+      -.75em 0 0 0 #fff,
+      .75em 0 0 0 #fff,
+      1em 0 0 0 #fff,
+      -1em .25em 0 0 #fff,
+      1em .25em 0 0 #fff,
+      -.75em .75em 0 0 #fff,
+      .75em .75em 0 0 #fff,
+      /* Left Arm */
+      1.25em 0 0 0 #fff,
+      1.25em -.25em 0 0 #fff,
+      1.25em -.5em 0 0 #fff,
+      /* Right Arm */
+      -1.25em 0 0 0 #fff,
+      -1.25em -.25em 0 0 #fff,
+      -1.25em -.5em 0 0 #fff,
+      /* Left Foot */
+      -1em 1em 0 0 #fff,
+      -1em 1em 0 0 #fff,
+      /* Right Foot */
+      1em 1em 0 0 #fff,
+      1em 1em 0 0 #fff;
+  }
 }
 
 @keyframes show-up {
@@ -97,6 +215,9 @@ body {
 }
 
 @media screen and (max-width: 560px) {
+    h2 {
+        font-size: 1.2rem;
+    }
     #introduction {
         .avatar {
             width: 120px;
