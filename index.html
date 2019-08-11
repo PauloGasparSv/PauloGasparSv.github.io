@@ -6,37 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <style>
         /* Planning on async loading the css files. */
-        * {
-            box-sizing: border-box;
-        }
-        body > section {
-            max-width: 100vw;
-            width: 100%;
-        }
-        #introduction {
-            position: relative;
-            height: 95vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1;
-        }
-        #introduction  .background {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            z-index: -1;
-            opacity: 0;
-            background-position: center;
-            background-size: cover;
-        }
-        body {
-            background: #030200;
-            padding: 0;
-            margin: 0;
-        }
         #loader {
             position: fixed;
             left: 0;
@@ -47,7 +16,9 @@
             justify-content: center;
             align-items: center;
             z-index: 100;
-            background-color: #030200;
+            background-color: #2c2828;
+            animation: go-away 2s forwards;
+            animation-delay: 0.6s;
         }
         #loader > .right-brackets {
             display: block;
@@ -56,7 +27,7 @@
             height: 8px;
             transform: rotate(45deg);
             background: #f5f1f1;
-            margin-left: 4px; 
+            margin-left: 4px;
             margin-bottom: 16px;
             animation: go-right 0.6s forwards ease;
             animation-delay: 0.4s;
@@ -103,6 +74,11 @@
            from { margin-right: 4px; opacity: 1; }
            to { margin-right: 64px; opacity: 0; }
         }
+        @keyframes go-away {
+            0% { opacity: 1; }
+            50% { opacity: 1; }
+            100% { opacity: 0; z-index: -10; }
+        }
     </style>
     <link rel="stylesheet" href="public/css/app.min.css">
     <script defer src="public/js/main.min.js"></script>
@@ -113,9 +89,25 @@
         <span class="left-brackets"></span>
         <span class="right-brackets"></span>
     </div>
+    <main id="introduction">
+        <div class="avatar">
+            <img src="public/images/profile.jpeg" alt="">
+        </div>
+        <div class="subtitle">Hello! My name is Paul!</div>
+        <div class="division sm"></div>
+        <div class="social">
+            <img src="public/images/icons/github-logo.png" alt="">
+            <img src="public/images/icons/linkedin.png" alt="">
+            <img src="public/images/icons/twitter.png" alt="">
+        </div>
+    </main>
+    <section>
 
-    <div>
-        Oi
-    </div>
+    </section>
+    <section id="credits">
+        <div>Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="https://www.flaticon.com/"                 title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"                 title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+        <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"                 title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"                 title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+        <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"                 title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"                 title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+    </section>
 </body>
 </html>

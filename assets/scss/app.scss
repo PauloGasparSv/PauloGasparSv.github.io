@@ -1,0 +1,78 @@
+@import "variables";
+@import url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap');
+
+* { box-sizing: border-box; }
+
+body {
+    background:#e2e2e2;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+#introduction {
+    background: #222;
+    width: 100vw;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    .avatar {
+        overflow: hidden;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 32px;
+        box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.3);
+        img {
+            width: 110%;
+            transition: 0.5s;
+            filter: grayscale(30%);
+        }
+        &:hover {
+            img {
+                width: 120%;
+                filter: grayscale(30%) blur(1px);
+            }
+        }
+    }
+    .subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+    }
+    .division {
+        margin-bottom: 16px;
+    }
+    .social {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        width: 156px;
+        img {
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            transition: 0.2s;
+            &:hover {
+                transform: translateY(-4px);
+            }
+        }
+    }
+}
+
+.division {
+    background: #fff;
+    height: 2px;
+    width: 100%;
+    border-radius: 4px;
+    margin: 8px 0;
+    &.sm {
+        width: 128px;
+    }
+}
