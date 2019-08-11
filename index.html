@@ -79,7 +79,7 @@
             height: 8px;
             transform: rotate(225deg);
             background: #f5f1f1;
-            margin-right: 4px; 
+            margin-right: 4px;
             margin-top: 16px;
             animation: go-left 0.6s forwards ease;
             animation-delay: 0.4s;
@@ -96,18 +96,16 @@
             background: #f5f1f1;
         }
         @keyframes go-right {
-           from { margin-left: 4px; opacity: 1;}
-           to { margin-left: 64px; opacity: 0 } 
+           from { margin-left: 4px; opacity: 1; }
+           to { margin-left: 64px; opacity: 0 }
         }
         @keyframes go-left {
-           from { margin-right: 4px; opacity: 1;}
-           to { margin-right: 64px; opacity: 0;} 
+           from { margin-right: 4px; opacity: 1; }
+           to { margin-right: 64px; opacity: 0; }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Cabin:500,700" rel="stylesheet">
-    <link rel="stylesheet" href="public/css/home/app.css">
-    <script defer src="public/js/main.js"></script>
+    <link rel="stylesheet" href="public/css/app.min.css">
+    <script defer src="public/js/main.min.js"></script>
     <title>Paulo Gaspar Sena do Vale</title>
 </head>
 <body>
@@ -115,79 +113,9 @@
         <span class="left-brackets"></span>
         <span class="right-brackets"></span>
     </div>
-    <div id="color-pallet">
-        <span><span>#f5f1f1</span></span>
-        <span><span>#039e9e</span></span>
-        <span><span>#026773</span></span>
-        <span><span>#024059</span></span>
-        <span><span>#b41d0f</span></span>
-        <span><span>#730C02</span></span>
-        <span><span>#4d0600</span></span>
-        <span><span>#0D0802</span></span>
+
+    <div>
+        Oi
     </div>
-    <section id="introduction">
-        <div class="background" data-src="./public/images/notebook-dark.jpeg"></div>
-        <h1 id="greetings">Hi, my name is Paulo Vale</h1>
-        <a class="down-arrow" href="#">
-            <span class="bottom"></span>
-        </a>
-    </section>
-    <section id="timeline">
-        <div>
-            <div class="header">
-                <h1>My Experiences</h1>
-            </div>
-            <div class="trunk">
-                <span></span>
-            </div>
-            <div class="now right">
-                <span>MadeInWeb e Mobile</span>
-                <div class="branch"></div>
-            </div>
-            <div class="now left">
-                <span>BSI Tecnologia</span>
-                <div class="branch"></div>
-            </div>
-            <div class="now left">
-                <span>E-gestão</span>
-                <div class="branch"></div>
-            </div>
-            <div class="now right">
-                <span>Universidade de São Paulo</span>
-                <div class="branch"></div>
-            </div>
-            <div class="now left">
-                <span>Curso Técnico de Desenvolvimento de Jogos</span>
-                <div class="branch"></div>
-            </div>
-        </div>
-    </section>
-    <section id="about">
-        <img class="avatar" src="./public/images/temp.jpeg" alt="" width="100">
-    </section>
-    v1.2
 </body>
-<script>
-    //Async loading the background image.
-    const background = document.querySelector('#introduction>.background');
-    const backgroundImage = new Image();
-    const initTime = Date.now();
-    backgroundImage.src = background.getAttribute('data-src');
-    backgroundImage.onload = function() {
-        const loader = document.querySelector("#loader");
-        background.style.backgroundImage = `url('${this.src}')`;
-        // Forcing the animations to play.
-        if(Date.now() - initTime > 1000) {
-            document.querySelector('#introduction').classList.add('show');
-            loader.style.display = 'none';
-            loader.remove();
-        } else {
-            setTimeout(() => {
-                document.querySelector('#introduction').classList.add('show');
-                loader.style.display = 'none';
-                loader.remove();
-            }, 1000 - (Date.now() - initTime))
-        }
-    };
-</script>
 </html>

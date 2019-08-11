@@ -1,50 +1,34 @@
 'use strict';
+/* Gulp */
+const { series, src, dest, watch } = require('gulp');
+/* Sass */
+const sass = require('gulp-sass');
+sass.compiler = require('node-sass');
+/* Clean Css (Minify) */
+const cleanCSS = require('gulp-clean-css');
+/* Gulp Rename */
+const rename = require('gulp-rename');
+/* Js3 Uglify */
+const uglify = require('gulp-uglify');
 
-const   gulp = require('gulp'),
-        del = require('del'),
-        htmlmin = require('gulp-htmlmin'),
-        less = require('gulp-less'),
-        uglify = require('gulp-uglify-es').default,
-        path = require('path'),
-        bs = require('browser-sync').create();
+/* Tasks */
+function css() {
+    return src('./assets/scss/**/*.scss')
+        .pipe(sass.sync().on('error', sass.logError))
+        .pipe(rename({ extname: '.min.css' }))
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(dest('public/css/'))
+}
+function js() {
+    return src('./assets/js/**/*.js')
+        .pipe(uglify())
+        .pipe(rename({ extname: '.min.js' }))
+        .pipe(dest('public/js/'))
+}
 
-//Cleaning Tasks
-gulp.task('clean', () => del(['public']));
-
-//Task
-gulp.task('less', () =>
-    gulp.src('./assets/styles/**/app.less')
-    .pipe(less({
-        paths: [path.join(__dirname, 'less', 'includes')]
-    }))
-    .pipe(gulp.dest('./public/css'))
-    .pipe(bs.reload({stream: true}))
-);
-gulp.task('scripts', () => 
-    gulp.src('./assets/js/**/*.js')
-    .pipe(uglify())
-    .pipe(gulp.dest('./public/js'))
-    .pipe(bs.reload({stream: true}))
-);
-gulp.task('pages', () =>
-    gulp.src(['./**/*.html'])
-    .pipe(htmlmin({
-        collapseWhitespace: true, removeComments: true
-    }))
-    .pipe(gulp.dest('./public'))
-);
-
-//Watchers For Dev
-gulp.task('watch-and-serve', () => {
-    bs.init({
-        server: {
-            baseDir: "./"
-        }
-    });
-    gulp.watch('./assets/styles/**/*.less', gulp.parallel('less'));
-    gulp.watch('./assets/js/**/*.js', gulp.parallel('scripts'));
-    gulp.watch("./**/*.html").on('change', bs.reload);
-}); 
-
-//The main gulp command for building
-gulp.task('default', gulp.parallel('less','scripts','pages'));
+/* Pipelines */
+exports.default = series(css);
+exports.watch = function() {
+    watch('./assets/scss/**/*.scss', css);
+    watch('./assets/js/**/*.js', js);
+}
