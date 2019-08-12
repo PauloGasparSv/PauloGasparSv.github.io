@@ -20,6 +20,7 @@ body {
     color: #fff;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 2px 6px 4px rgba(0, 0, 0, 0.4);
     & > *:not(.space-invader) {
         animation: show-up 1s forwards;
         animation-delay: 1.8s;
