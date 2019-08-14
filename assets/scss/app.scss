@@ -283,26 +283,34 @@ body {
             &.oldest {
                 padding-bottom: 0;
             }
-        }
-    }
-    .company {
-        width: 64px;
-        height: 64px;
-        background: #fff;
-        border-radius: 8px;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        img {
-            width: 100%;
-            transition: 0.4s;
-            &:hover {
-                width: 120%;
+            .company {
+                width: 64px;
+                height: 64px;
+                min-width: 64px;
+                background: #fff;
+                border-radius: 8px;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    width: 100%;
+                    transition: 0.4s;
+                    &:hover {
+                        width: 120%;
+                    }
+                }
+            }
+            .description {
+                padding-left: 16px;
+                .about {
+                    color: #e2e2e2;
+                    text-align: justify;
+                    font-size: 0.85rem;
+                }
             }
         }
     }
-
 }
 
 #projects {
@@ -534,6 +542,7 @@ body {
             .time {
                 padding: 24px;
                 padding-left: 36px;
+                flex-direction: column;
                 &.oldest {
                     padding-bottom: 0;
                 }
