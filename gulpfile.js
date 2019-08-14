@@ -9,7 +9,9 @@ const cleanCSS = require('gulp-clean-css');
 /* Gulp Rename */
 const rename = require('gulp-rename');
 /* Js3 Uglify */
-const uglify = require('gulp-uglify');
+// const uglify = require('gulp-uglify');
+/* Tenser Es6 Friendly Uglify */
+const uglify = require('gulp-uglify-es').default;
 
 /* Tasks */
 function css() {
