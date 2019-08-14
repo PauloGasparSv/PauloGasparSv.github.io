@@ -147,7 +147,7 @@ body {
         }
         .badges {
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
             flex-wrap: wrap;
             flex-direction: row;
@@ -225,6 +225,33 @@ body {
     background: #fff;
     padding: 8px 32px;
     width: 100vw;
+
+    .grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column-gap: 8px;
+        grid-row-gap: 8px;
+        .item {
+            background: #222;
+            width: 100%;
+            min-height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            img {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                transition: 0.4s;
+                width: 120%;
+                &:hover {
+                    width: 140%;
+                }
+            }
+        }
+    }
 }
 
 #credits {
@@ -348,16 +375,23 @@ body {
     }
 }
 
+@media screen and (max-width: 910px) {
+    #projects {
+        .grid {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}
 @media screen and (max-width: 720px) {
     #works {
         & > div {
             flex-direction: column !important;
             .image {
-                width: 100%;
+                width: 80% !important;
                 margin-bottom: 32px;
             }
             .summary {
-                width: 100%;
+                width: 80% !important;
                 .title {
                     text-align: center;
                     margin-bottom: 24px;
@@ -365,11 +399,18 @@ body {
                 }
             }
             .badges {
+                padding: 0 72px;
                 .badge {
                     width: 36px;
                     height: 36px;
                 }
             }
+        }
+    }
+
+    #projects {
+        .grid {
+            grid-template-columns: 1fr 1fr;
         }
     }
 }
@@ -401,13 +442,14 @@ body {
         & > div {
             flex-direction: column;
             .image {
-                width: 100%;
+                width: 100% !important;
                 margin-bottom: 32px;
             }
             .summary {
-                width: 100%;
+                width: 100% !important;
             }
             .badges {
+                padding: 0;
                 .badge {
                     width: 28px;
                     height: 28px;
@@ -415,5 +457,13 @@ body {
             }
         }
     }
-   
+    #projects {
+        .grid {
+            grid-template-columns: 1fr;
+            .item {
+                max-width: 200px;
+                max-height: 200px;
+            }
+        }
+    }
 }
