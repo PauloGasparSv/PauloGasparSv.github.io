@@ -9,4 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
             behavior: 'smooth'
         });
     })
+    document.querySelector('.easter-egg').addEventListener('click', () => {
+        document.querySelector('#meicon').classList.add('active');
+        document.querySelector('#ellan').classList.add('active');
+        document.querySelector('#pinduca').classList.add('active');
+        document.querySelector('#mok').classList.add('active');
+    });
 });

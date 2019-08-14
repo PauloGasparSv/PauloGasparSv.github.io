@@ -383,8 +383,7 @@ body {
 #skills {
     background: #222;
     color: #fff;
-    padding: 8px 32px;
-    padding-bottom: 64px;
+    padding: 8px 32px 32px 32px;
     width: 100vw;
     .badges {
         display: flex;
@@ -430,13 +429,21 @@ body {
 #credits {
     background: #1d1d1d;
     color: #fff;
-    padding: 8px 32px;
-    padding-bottom: 0;
+    padding: 24px 32px;
     width: 100vw;
     font-size: 0.85rem;
+    position: relative;
     a {
         text-decoration: none;
         color: $primary !important;
+    }
+    .easter-egg {
+        color: #3f3f3f;
+        font-size: 0.75rem;
+        position: absolute;
+        bottom: 8px;
+        right: 24px;
+        cursor: pointer;
     }
 }
 
@@ -499,6 +506,90 @@ body {
     animation: 1s space-invader infinite;
 }
 
+#meicon {
+    display: none;
+    &.active {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        width: 20vw;
+        left: 50%;
+        transform: translate(-50%, 0);
+        animation: meicon 1s infinite ease-in-out;
+    }
+}
+
+#ellan {
+    display: none;
+    &.active {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        width: 20vw;
+        left: 32px;
+        animation: ellaue 1s infinite linear;
+    }
+}
+
+#pinduca {
+    display: none;
+    &.active {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        width: 20vw;
+        right: 32px;
+        animation: ellaue 1s infinite linear;
+    }
+}
+
+#mok {
+    display: none;
+    &.active {
+        text-align: center;
+        display: block;
+        font-size: 3rem;
+        position: fixed;
+        top: 32px;
+        left: 50%;
+        color: #00ff00;
+        transform: translateX(-50%);
+    }
+}
+
+
+@keyframes meicon {
+    0% {
+        transform: translate(-50%, 0) scale(1) rotate(0);
+    }
+    25% {
+        transform: translate(-50%, -128px) scale(0.7) rotate(180deg);
+    }
+    50% {
+        transform: translate(-50%, -156px) scale(1.2) rotate(360deg);
+    }
+    75% {
+        transform: translate(-50%, -112px) scale(0.2) rotate(360deg);
+    }
+    100% {
+        transform: translate(-50%, 0) scale(1) rotate(0);
+    }
+}
+
+@keyframes ellaue {
+    0% {
+        transform: rotateY(0);
+        bottom: 0;
+    }
+    50% {
+        transform: rotateY(360deg) rotateX(24deg);
+        bottom: 48px;
+    }
+    100% {
+        transform: rotateY(0);
+        bottom: 0;
+    }
+}
 @keyframes invader-go-right {
     from { left: -64px }
     to { left: 105vw; }
