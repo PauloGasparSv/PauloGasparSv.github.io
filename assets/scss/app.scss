@@ -105,12 +105,13 @@ body {
     .down {
         width: 92px;
         height: 92px;
+        cursor: pointer;
         background: rgba(255, 255, 255, 0.3);
         position: absolute;
-        bottom: 32px;
+        bottom: 22px;
         left: 50%;
         border-radius: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%) scale(0.75);
         transition: 0.4s;
         animation: show 1s forwards;
         animation-delay: 4.5s;
@@ -141,6 +142,16 @@ body {
                 top: -16px;
                 transform: rotate(90deg);
             }
+        }
+    }
+    .version {
+        font-size: 0.7rem;
+        color: #fff;
+        position: absolute;
+        bottom: 8px;
+        left: 8px;
+        span {
+            color: #3f3f3f;
         }
     }
 }
@@ -201,7 +212,7 @@ body {
                 height: 40px;
                 border-radius: 50%;
                 overflow: hidden;
-                box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.15);
+                box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.25);
                 transition: 0.2s;
                 position: relative;
                 display: flex;
@@ -213,7 +224,7 @@ body {
                     border-radius: 50%;
                 }
                 &:hover {
-                    box-shadow: 2px 5px 8px 1px rgba(0, 0, 0, 0.2);
+                    box-shadow: 2px 5px 8px 1px rgba(0, 0, 0, 0.3);
                     transform: translateY(-2px);
                     img {
                         width: 100%;
@@ -240,7 +251,7 @@ body {
     background: #222;
     width: 100vw;
     min-height: 300px;
-    padding: 8px 32px;
+    padding: 8px 32px 32px 8px;
     color: #fff;
     .timeline {
         display: grid;
@@ -384,13 +395,13 @@ body {
         width: 100%;
         margin-top: 32px;
         .badge {
-            margin-right: 12px;
-            margin-bottom: 12px;
+            margin-right: 16px;
+            margin-bottom: 16px;
             width: 64px;
             height: 64px;
             border-radius: 50%;
             overflow: hidden;
-            box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.15);
+            box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.25);
             transition: 0.2s;
             position: relative;
             display: flex;
@@ -403,7 +414,7 @@ body {
                 border-radius: 50%;
             }
             &:hover {
-                box-shadow: 2px 5px 8px 1px rgba(0, 0, 0, 0.2);
+                box-shadow: 2px 5px 8px 1px rgba(0, 0, 0, 0.3);
                 transform: translateY(-2px);
                 img {
                     width: 100%;
@@ -417,9 +428,16 @@ body {
 }
 
 #credits {
-    background: #e2e2e2;
+    background: #1d1d1d;
+    color: #fff;
     padding: 8px 32px;
+    padding-bottom: 0;
     width: 100vw;
+    font-size: 0.85rem;
+    a {
+        text-decoration: none;
+        color: $primary !important;
+    }
 }
 
 .division {
