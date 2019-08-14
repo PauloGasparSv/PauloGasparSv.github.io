@@ -81,8 +81,6 @@
             100% { opacity: 0; z-index: -10; }
         }
     </style>
-    <link rel="stylesheet" href="public/css/app.min.css">
-    <script defer src="public/js/main.min.js"></script>
     <title>Paulo Gaspar Sena do Vale</title>
 </head>
 <body>
@@ -117,7 +115,7 @@
     </main>
     <section id="works">
         <h2 class="title">Showcase</h2>
-        <div class="medic">
+        <div class="medic" data-aos="fade-right">
             <div class="image">
                 <img src="public/images/vue-medic.png">
             </div>
@@ -163,7 +161,7 @@
             </div>
         </div>
         <div class="division dark"></div>
-        <div class="howtotrain">
+        <div class="howtotrain" data-aos="fade-left">
             <div class="image">
                 <a href="http://howtotrain.com.br/">
                     <img src="public/images/htt.png">
@@ -211,7 +209,7 @@
             </div>
         </div>
         <div class="division dark"></div>
-        <div class="agencia">
+        <div class="agencia" data-aos="fade-right">
             <div class="image">
                 <img src="public/images/consult.png">
             </div>
@@ -259,11 +257,10 @@
                 </div>
             </div>
         </div>
-
     </section>
     <section id="experience">
         <h2 class="title white">My Experience</h2>
-        <div class="timeline">
+        <div class="timeline" data-aos="fade-up">
             <div class="line latest">
                 <div class="dot"></div>
             </div>
@@ -320,6 +317,7 @@
         <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/"                 title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"                 title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
         <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"                 title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"                 title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
     </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         const font = document.createElement('link');
         font.rel = 'stylesheet';
@@ -328,6 +326,23 @@
             font,
             document.head.childNodes[ document.head.childNodes.length - 1 ].nextSibling
         );
+
+        const app = document.createElement('link');
+        app.rel = 'stylesheet';
+        app.href = 'public/css/app.min.css';
+        document.head.insertBefore(
+            app,
+            document.head.childNodes[ document.head.childNodes.length - 1 ].nextSibling
+        );
+
+        const aos = document.createElement('link');
+        aos.rel = 'stylesheet';
+        aos.href = 'https://unpkg.com/aos@2.3.1/dist/aos.css';
+        document.head.insertBefore(
+            aos,
+            document.head.childNodes[ document.head.childNodes.length - 1 ].nextSibling
+        );
     </script>
+    <script defer src="public/js/main.min.js"></script>
 </body>
 </html>
