@@ -201,6 +201,30 @@ body {
     min-height: 300px;
     padding: 8px 32px;
     color: #fff;
+    .company {
+        width: 64px;
+        height: 64px;
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 100%;
+            transition: 0.4s;
+            &:hover {
+                width: 120%;
+            }
+        }
+    }
+
+}
+
+#projects {
+    background: #fff;
+    padding: 8px 32px;
+    width: 100vw;
 }
 
 #credits {
