@@ -339,7 +339,29 @@ body {
                 transform: translate(-50%, -50%);
                 transition: 0.4s;
                 width: 120%;
-                &:hover {
+            }
+            & > div {
+                cursor: pointer;
+                opacity: 0;
+                z-index: 1;
+                transition: 0.4s;
+                background: rgba(0, 0, 0, 0.8);
+                color: #fff;
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                text-align: center;
+            }
+            &:hover {
+                & > div {
+                    opacity: 1;
+                }
+                img {
                     width: 140%;
                 }
             }
