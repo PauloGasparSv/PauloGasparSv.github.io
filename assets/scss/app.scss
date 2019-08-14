@@ -444,12 +444,14 @@ body {
             .image {
                 width: 100% !important;
                 margin-bottom: 32px;
+                padding: 0 !important;
             }
             .summary {
                 width: 100% !important;
+                padding: 0 !important;
             }
             .badges {
-                padding: 0;
+                padding: 0 !important;
                 .badge {
                     width: 28px;
                     height: 28px;
@@ -461,7 +463,6 @@ body {
         .grid {
             grid-template-columns: 1fr;
             .item {
-                max-width: 200px;
                 max-height: 200px;
             }
         }
