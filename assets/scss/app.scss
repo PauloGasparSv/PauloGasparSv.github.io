@@ -767,6 +767,9 @@ body {
                 height: 28px;
             }
         }
+        .down {
+            transform: translateX(-50%) scale(0.5);
+        }
     }
     #works {
         & > div {
