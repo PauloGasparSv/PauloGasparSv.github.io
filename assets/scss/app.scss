@@ -12,7 +12,6 @@ body {
 }
 
 
-
 #introduction {
     background: #222;
     width: 100vw;
@@ -674,6 +673,38 @@ body {
     50% {
         top: 52px;
     }
+}
+
+@media screen and (min-width: 1720px) {
+    #works {
+        & > div:not(.division) {
+            .image {
+                width: 40%;
+            }
+        }
+    }
+    #projects {
+        .grid {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        }
+    }
+    #works {
+        & > div {
+            .badges {
+                .badge {
+                    width: 64px !important;
+                    height: 64px !important;
+                }
+            }
+        }
+    }
+
+    #skills {
+        .badges {
+            padding: 0 256px;
+        }
+    }
+
 }
 
 @media screen and (max-width: 910px) {
