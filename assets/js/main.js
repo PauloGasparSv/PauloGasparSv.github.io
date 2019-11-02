@@ -15,4 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('#pinduca').classList.add('active');
         document.querySelector('#mok').classList.add('active');
     });
+    document.querySelector('.avatar img').addEventListener('click', function() {
+        let index = parseInt(this.getAttribute('data-index'));
+        if (index < 9) {
+            index ++;
+        }
+        this.setAttribute('data-index', index);
+        this.setAttribute('src', `public/images/profiles/${index}.jpeg`);
+    });
 });

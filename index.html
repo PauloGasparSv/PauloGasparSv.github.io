@@ -7,6 +7,11 @@
     <link rel="shortcut icon" href="favicon.ico"/>
     <style>
         /* Planning on async loading the css files. */
+        body {
+            overflow: hidden;
+            animation: unlock 2s forwards;
+            animation-delay: 0.3s;
+        }
         #loader {
             position: fixed;
             left: 0;
@@ -80,6 +85,10 @@
             50% { opacity: 1; }
             100% { opacity: 0; z-index: -10; }
         }
+        @keyframes unlock {
+            0% { overflow: hidden; }
+            100% { overflow: auto; }
+        }
     </style>
     <title>Paulo Gaspar Sena do Vale</title>
 </head>
@@ -90,7 +99,7 @@
     </div>
     <main id="introduction">
         <div class="avatar">
-            <img src="public/images/profile.jpeg">
+            <img src="public/images/profiles/1.jpeg" data-index="1">
         </div>
         <div class="subtitle">Hello! My name is Paulo Vale and I'm a <span>Fullstack developer</span>.</div>
         <div class="division sm"></div>
@@ -272,7 +281,7 @@
                 <div class="description">
                     <p class="years">2017 - Now</p>
                     <p class="about">
-                        I started as an Engineer C# Developer working with .Net Core. Since the company had many different projects written in many different languages and since I wanted to learn more, i started migrating to other frameworks and languages. Here, I learned a lot about Front-end. So much that i felt capable of handlign my own as a Fullstack developer for any project and started to get some client projects to make by myself at work (API, Front-end and deployment on Aws).<br> I worked on so many projects and languages in here that eventually I went from C# developer to Fullstack Developer for Node.js, Php, Python and C#.
+                        I started as an Engineer C# Developer working with .Net Core. Since the company had many different projects written in many different languages and since I wanted to learn more, i started migrating to other frameworks and languages. Here, I learned a lot about Front-end. So much that i felt capable of handlign my own as a Fullstack developer for any project and started to get some client projects to make by myself at work (API, Front-end and deployment on Aws).<br> I worked on so many projects and languages in here that eventually I went from C# developer to Fullstack Developer for Node.js, Php, Python and C#. Recently, i was promoted to Senior fullstack NodeJS developer.
                     </p>
                 </div>
             </div>
