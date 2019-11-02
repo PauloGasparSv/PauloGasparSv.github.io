@@ -470,7 +470,7 @@
 
         const app = document.createElement('link');
         app.rel = 'stylesheet';
-        app.href = 'public/css/app.min.css';
+        app.href = 'public/css/app.min.css?bust=1';
         document.head.insertBefore(
             app,
             document.head.childNodes[ document.head.childNodes.length - 1 ].nextSibling
@@ -484,6 +484,6 @@
             document.head.childNodes[ document.head.childNodes.length - 1 ].nextSibling
         );
     </script>
-    <script defer src="public/js/main.min.js"></script>
+    <script defer src="public/js/main.min.js?bust=1"></script>
 </body>
 </html>
