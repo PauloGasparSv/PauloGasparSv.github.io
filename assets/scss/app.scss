@@ -41,16 +41,18 @@ body {
         margin-bottom: 32px;
         transition: 1s;
         box-shadow: 2px 2px 4px 4px rgba(0,0,0,0.3);
+        filter: grayscale(30%);
+        transition: 0.5s filter;
+
         img {
             width: 110%;
             transform: translateX(-8px);
             transition: 0.5s;
-            filter: grayscale(30%);
         }
         &:hover {
+            filter: grayscale(30%) blur(1px);
             img {
                 width: 125%;
-                filter: grayscale(30%) blur(1px);
             }
         }
     }
