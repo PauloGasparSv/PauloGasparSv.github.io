@@ -324,6 +324,22 @@ body {
                     text-align: justify;
                     font-size: 0.85rem;
                 }
+                .badges {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: row;
+                    .ibm-badge {
+                        width: 64px;
+                        height: 64px;
+                        display: block;
+                        margin-right: 8px;
+                        img {
+                            width: inherit;
+                            height: inherit;
+                        }
+                    }
+                }
             }
         }
     }
@@ -355,9 +371,9 @@ body {
                 top: 50%;
                 transform: translate(-50%, -50%);
                 transition: 0.4s;
-                width: 120%;
+                width: 105%;
             }
-            & > div {
+            & > a {
                 cursor: pointer;
                 opacity: 0;
                 z-index: 1;
@@ -375,7 +391,7 @@ body {
                 text-align: center;
             }
             &:hover {
-                & > div {
+                & > a {
                     opacity: 1;
                 }
                 img {
@@ -748,6 +764,8 @@ body {
         }
     }
 
+
+    
     #experience {
         .timeline {
             grid-template-columns: 3px 1fr;
@@ -765,6 +783,12 @@ body {
                 flex-direction: column;
                 &.oldest {
                     padding-bottom: 0;
+                }
+                .description .badges {
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 48px;
+                    margin-bottom: 16px;
                 }
             }
         }
