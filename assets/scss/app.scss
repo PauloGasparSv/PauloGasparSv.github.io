@@ -435,6 +435,7 @@ body {
             background: #fff;
             img {
                 width: 90%;
+                transition: width 0.2s;
                 border-radius: 50%;
             }
             &:hover {
