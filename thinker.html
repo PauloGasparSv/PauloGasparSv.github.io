@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+        * { box-sizing: border-box; }
+        html, body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #8375ff;
+        }
+        .title {
+            font-size: 32px;
+            margin-top: 42px;
+            margin-bottom: 42px;
+            padding: 24px 32px;
+            background-color: #ffff00;
+            border-radius: 8px;
+            color: #000;
+        }
+        .thoughts {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .thought {
+            width: 80%;
+            min-height: 64px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.2);
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .line {
+            width: 99%;
+            margin: 8px auto 16px auto;
+            height: 2px;
+            background-color: #e2e2e2;
+        }
+
+        .author {
+            font-size: 24px;
+        }
+
+        .phrase {
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+<div class="thoughts">
+    <div class="title" data-aos="zoom-in">Made Pensador</div>
+</div>
+</body>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+AOS.init();
+const thoughts = [{
+    "phrase": "Mano, você por acaso já fechou os olhos..... e apertou a própria bunda?",
+    "author": "Dudu Mendes"
+}, {
+    "phrase": "Nada tem pedaços se voçê mastigar o bastante",
+    "author": "Daniel o Chefe que Manda Tasks"
+}, {
+    "phrase": "Se você tem SSD você não precisa usar docker",
+    "author": "Vitinho o Que Não Manja de Docker"
+}, {
+    "phrase": "A terra é um beirute",
+    "author": "Alef das Impressoras"
+}, {
+    "phrase": "Pegou na mão?\nNão, tava comendo",
+    "author": "Gabriel Pentelhos"
+}, {
+    "phrase": "Eu acho mulheres grávidas muito gatas",
+    "author": "Daniel The Denis"
+}, {
+    "phrase": "Uma partida de Tibia é igual a fumar mil pedras de crack",
+    "author": "Vitinho O Lenhador"
+}, {
+    "phrase": "O que mata não é o crack, é a saudade",
+    "author": "Dudu Ta Lendo"
+}, {
+    "phrase": "Pau no cu do Woody eu quero que ele queime na lava",
+    "author": "Vitinho O Sem Treguas e Arrombado"
+}, {
+    "phrase": "Jogar uma partida de Tibia é igual a fumar mil pedras de crack",
+    "author": "Vitinho O Corta Lenha"
+}, {
+    "phrase": "Só que você ir doze vezes em um restaurante vegano é foda né",
+    "author": "Alex Silva"
+}, {
+    "phrase": "Os caras da minha sala ficaram o ensino médio inteiro tentando tirar o caralho da minha boca e, me deixar bebâdo",
+    "author": "Gabriel Medeiros"
+}, {
+    "phrase": "É foda que os caras legais vão embora e o chatos continuam aqui",
+    "author": "Gabriel Medeiros"
+}, {
+    "phrase": "Uma coisa é uma coisa outra coisa é outra coisa!",
+    "author": "Victor Machado Sem Óculos"
+}, {
+    "phrase": "Quanto mais pesado o treino maior a sobremesa!",
+    "author": "Gabriel Medeiros"
+}, {
+    "phrase": "Fresno bota Legião Urbana pra mamar!!",
+    "author": "Mateus Gruber"
+}, {
+    "phrase": "Eu sou pior que nazista!",
+    "author": "Victor Machado"
+}, {
+    "phrase": "O jogo só acaba quando acaba!!",
+    "author": "Mateus Gruber"
+}, {
+    "phrase": "O jogo só acaba quando cai a um!!",
+    "author": "Victor Machado"
+}, {
+    "phrase": "Tanto lugar para sentar e você quer sentar bem num livro",
+    "author": "Gabriel Medeiros"
+}, {
+    "phrase": "Isso ai é um PF?\nAH Não! É maconha",
+    "author": "Vitinho Machado"
+}, {
+    "phrase": "Perguntaram ao Dalai Lama se ele já comeu um cú\n\"Só o de quem está lendo\", ele respondeu",
+    "author": "Eduardo Schmitz"
+}, {
+    "phrase": "E eu só queria fazer um sexo de boa",
+    "author": "Vitinho Machado"
+}, {
+    "phrase": "Esse negócio de falar palavrão não ta com nada",
+    "author": "Tinder do Gabriel"
+}, {
+    "phrase": "Se eu fosse o Gabriel, com 25 anos eu aposentava meu pau",
+    "author": "Vitinho Machado"
+}, {
+    "phrase": "Ele se pregou na cruz óbvio que ele daria o cu para curar o câncer",
+    "author": "Vitinho Machado"
+}, {
+    "phrase": "Isso ai é um PF?\nAH Não! É maconha",
+    "author": "Vitinho Machado"
+}, {
+    "phrase": "Perguntaram ao Dalai Lama se ele já comeu um cú\n\"Só o de quem está lendo\", ele respondeu",
+    "author": "Eduardo Schmitz"
+}, {
+    "phrase": "E eu só queria fazer um sexo de boa",
+    "author": "Vitinho Machado"
+}, {
+    "phrase": "Esse negócio de falar palavrão não ta com nada",
+    "author": "Tinder do Gabriel"
+}, {
+    "phrase": "Se eu fosse o Gabriel, com 25 anos eu aposentava meu pau",
+    "author": "Vitinho Machado"
+}, {
+    "phrase": "Ele se pregou na cruz óbvio que ele daria o cu para curar o câncer",
+    "author": "Vitinho Machado"
+}, {
+    "phrase": "Isso ai é um PF?<br>\nAH Não! É maconha",
+    "author": "Vitinho Machado"
+}, {
+    "phrase": "Perguntaram ao Dalai Lama se ele já comeu um cú<br>\n\"Só o de quem está lendo\", ele respondeu",
+    "author": "Eduardo Schmitz"
+}, {
+    "phrase": "E eu só queria fazer um sexo de boa",
+    "author": "Vitinho Machado"
+}, {
+    "phrase": "Esse negócio de falar palavrão não ta com nada",
+    "author": "Tinder do Gabriel"
+}, {
+    "phrase": "Se eu fosse o Gabriel, com 25 anos eu aposentava meu pau",
+    "author": "Vitinho Machado"
+}, {
+    "phrase": "Ele se pregou na cruz óbvio que ele daria o cu para curar o câncer",
+    "author": "Vitinho Machado"
+}, {
+    "phrase": "Isso ai é um PF?<br>\nAH Não! É maconha",
+    "author": "Vitinho Machado"
+}, {
+    "phrase": "Perguntaram ao Dalai Lama se ele já comeu um cú<br>\n\"Só o de quem está lendo\", ele respondeu",
+    "author": "Eduardo Schmitz"
+}, {
+    "phrase": "E eu só queria fazer um sexo de boa",
+    "author": "Vitinho Machado"
+}, {
+    "phrase": "Esse negócio de falar palavrão não ta com nada",
+    "author": "Tinder do Gabriel"
+}, {
+    "phrase": "Se eu fosse o Gabriel, com 25 anos eu aposentava meu pau",
+    "author": "Vitinho Machado"
+}, {
+    "phrase": "Ele se pregou na cruz óbvio que ele daria o cu para curar o câncer",
+    "author": "Vitinho Machado"
+}, {
+    "phrase": "Eu comi a carne do Hitler",
+    "author": "Vitinho Machado"
+}, {
+    "phrase": "Sabe o que eu acho?<br>\nEu acho é pouco",
+    "author": "Vitinho Machado"
+}, {
+    "phrase": "A verdade é aquilo que a galera aceita",
+    "author": "Danilo Novaes"
+}, {
+    "phrase": "Eu sou corno",
+    "author": "Vitinho Machado"
+}, {
+    "phrase": "Maconha é o cigarro vegano",
+    "author": "John Schmitz"
+}, {
+    "phrase": "Welcome to the Johngle",
+    "author": "Gabriel Medeiros"
+}, {
+    "phrase": "Vegano é pior do que nazista",
+    "author": "Mateus Gruber"
+}, {
+    "phrase": "Quando eu cago sai tudo cagado. Tudo cagado.",
+    "author": "Vitinho"
+}, {
+    "phrase": "Que vontade de chupar um cu",
+    "author": "Gabriel Medeiros"
+}, {
+    "phrase": "Se jesus usasse maconha, eu fumaria",
+    "author": "Gabriel Medeiros"
+}];
+
+
+let batata = true;
+thoughts.forEach(t => {
+    const div = document.createElement('div');
+    div.className = 'thought';
+    div.setAttribute('data-aos', batata ? 'fade-right' : 'fade-left')
+    batata = !batata;
+
+    const author = document.createElement('div');
+    author.className = 'author';
+    author.innerHTML = t.author;
+
+    const phrase = document.createElement('div');
+    phrase.className = 'phrase';
+    phrase.innerHTML = t.phrase;
+
+    const hr = document.createElement('div');
+    hr.className = 'line';
+
+    div.appendChild(author);
+    div.appendChild(hr);
+    div.appendChild(phrase);
+
+    document.querySelector('.thoughts').appendChild(div);
+
+    // <div class="thought" data-aos="fade-right">
+    //     <div class="author">Gruber</div>
+    //     <div class="phrase">Eu lambo cu</div>
+    // </div>
+});
+</script>
+</html>
