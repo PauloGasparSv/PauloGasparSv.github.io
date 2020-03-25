@@ -41,14 +41,15 @@
             position: relative;
             transition: 1s;
         }
-
-        .panel.closed {
-            opacity: 0;
-            filter: blur(10px);
-            margin-top: 100vw;
+        .subpanel {
+            transform: scale(0.8);
+            transition: 1s;
         }
-        .panel.closed img{
-            transform: rotate(50deg);
+        .panel.closed .subpanel {
+            opacity: 0;
+            filter: blur(2px);
+            transform: rotate(20deg) scale(0.8);
+            margin-top: 100vw;
         }
 
         .panel.clicked img{
@@ -60,9 +61,6 @@
             to { margin-bottom:  0; }
         }
 
-        .panel.closed div {
-            transform: rotate(50deg);
-        }
         .panel-bg {
             background: #ece9d8;
             width: 64px;
@@ -73,6 +71,7 @@
             transition: 1s;
         }
         .panel-bg-2 {
+            position: relative;
             background: #ece9d8;
             width: 340px;
             height: 64px;
@@ -82,6 +81,7 @@
             font-size: 20px;
             padding-top: 26px;
             transition: 1s;
+            z-index: 4;
             text-align: center;
             -webkit-touch-callout: none; /* iOS Safari */
             -webkit-user-select: none; /* Safari */
@@ -93,7 +93,7 @@
 
         }
         .panel.clicked .panel-bg-2 {
-            padding-top: 48px;
+            padding-top: 44px;
         }
         .shadow {
             width: 350px;
@@ -108,6 +108,8 @@
             box-shadow: 6px 6px 3px 2px rgba(0, 0, 0, 0.4);
         }
         .button {
+            position: relative;
+            z-index: 1;
             width: 120px;
             height: 36px;
             position: absolute;
@@ -145,18 +147,29 @@
                 transform: translate(0, 0) scale(1);
             }
         }
+        .version {
+            font-size: 12px;
+            color: #fff;
+            opacity: 0.2;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+        }
     </style>
 </head>
 <body>
 <div class="container">
     <div class="panel">
-        <img class="win" src="https://i.ya-webdesign.com/images/windows-error-png-11.png" alt="">
-        <div class="shadow"></div>
-        <div class="panel-bg"></div>
-        <div class="panel-bg-2">Receba Um Abraço</div>
-        <div class="button"></div>
-        <div class="close"></div>
+        <div class="subpanel">
+            <img class="win" src="https://i.ya-webdesign.com/images/windows-error-png-11.png" alt="">
+            <div class="shadow"></div>
+            <div class="panel-bg"></div>
+            <div class="panel-bg-2">Receba Um Abraço</div>
+            <div class="button"></div>
+            <div class="close"></div>
+        </div>
     </div>
+    <div class="version">1.0</div>
 </div>
 </body>
 <script>
