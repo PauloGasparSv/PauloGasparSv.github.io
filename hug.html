@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Document</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <style>
+        * { box-sizing: border-box; }
+        html, body {
+            font-family: 'MS Sans Serif', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2282fb;
+            max-width: 100vw;
+            max-height: 100vh;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            background-image: url('https://wallpaperaccess.com/full/90278.jpg');
+        }
+
+        .dialog-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-family: 'MS Sans Serif', sans-serif;
+            transform: translate(-50%, -50%);
+            border: 1px solid #787878;
+            background-color: #c0c0c0;
+            width: 80vw;
+            max-width: 800px;
+            height: 156px;
+            padding-top: 36px;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
+            animation: appear 1s forwards;
+        }
+
+        @keyframes appear {
+            from {
+                left: -50%;
+                top: 120%;
+                transform: translate(-50%, -50%) scale(0.2);
+            }
+            to {
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+        .header {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding-top: 4px;
+            height: 32px;
+            background-color: #0900c8;
+        }
+
+
+        button {
+            cursor: pointer;
+            outline: 0;
+            border: 1px solid black;
+            padding: 8px 16px !important;
+            font-size: 16px !important;
+            background: #c0c0c0;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        button::before {
+            content: '';
+            background: none;
+            border: 1px solid #fff;
+            /* width: 100%; */
+            /* height: 100%; */
+            position: absolute;
+            left: 1px;
+            top: 1px;
+            right: 1px;
+            bottom: 1px;
+        }
+
+        button:active {
+            background: #a8a8a8;
+        }
+        button:active::before {
+            border: 1px solid #c0c0c0;
+        }
+
+        .icon {
+            width: 54px;
+            height: 54px;
+            position: absolute;
+            left: 32px;
+            top: 64px;
+        }
+        .msg {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 48px;
+        }
+        span{
+            position: absolute;
+            color: #fff;
+            padding-left: 8px;
+            font-size: 10px;
+            top: 50%;
+            transform:translateY(-50%);
+            letter-spacing: 2px;
+        }
+        .background {
+            z-index: -1;
+            background: #fff;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+        }
+        .column {
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 4px;
+        }
+
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+            min-width: 128px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="thoughts">
+    <div class="background">
+        <div class="column col-1">
+            <img src="public/images/carol/1.jpeg" alt="">
+            <img src="public/images/carol/3.jpeg" alt="">
+            <img src="public/images/carol/5.jpeg" alt="">
+            <img src="public/images/carol/1.jpeg" alt="">
+            <img src="public/images/carol/3.jpeg" alt="">
+            <img src="public/images/carol/5.jpeg" alt="">
+            <img src="public/images/carol/1.jpeg" alt="">
+            <img src="public/images/carol/3.jpeg" alt="">
+            <img src="public/images/carol/5.jpeg" alt="">
+        </div>
+        <div class="column col-2">
+            <img src="public/images/carol/2.jpeg" alt="">
+            <img src="public/images/carol/4.jpeg" alt="">
+            <img src="public/images/carol/3.jpeg" alt="">
+            <img src="public/images/carol/2.jpeg" alt="">
+            <img src="public/images/carol/4.jpeg" alt="">
+            <img src="public/images/carol/3.jpeg" alt="">
+            <img src="public/images/carol/2.jpeg" alt="">
+            <img src="public/images/carol/4.jpeg" alt="">
+            <img src="public/images/carol/3.jpeg" alt="">
+        </div>
+        <div class="column col-3">
+            <img src="public/images/carol/4.jpeg" alt="">
+            <img src="public/images/carol/1.jpeg" alt="">
+            <img src="public/images/carol/5.jpeg" alt="">
+            <img src="public/images/carol/4.jpeg" alt="">
+            <img src="public/images/carol/1.jpeg" alt="">
+            <img src="public/images/carol/5.jpeg" alt="">
+            <img src="public/images/carol/4.jpeg" alt="">
+            <img src="public/images/carol/1.jpeg" alt="">
+            <img src="public/images/carol/5.jpeg" alt="">
+        </div>
+        <div class="column col-4">
+            <img src="public/images/carol/1.jpeg" alt="">
+            <img src="public/images/carol/2.jpeg" alt="">
+            <img src="public/images/carol/5.jpeg" alt="">
+            <img src="public/images/carol/1.jpeg" alt="">
+            <img src="public/images/carol/2.jpeg" alt="">
+            <img src="public/images/carol/5.jpeg" alt="">
+            <img src="public/images/carol/1.jpeg" alt="">
+            <img src="public/images/carol/2.jpeg" alt="">
+            <img src="public/images/carol/5.jpeg" alt="">
+        </div>
+    </div>
+    <div class="dialog-box">
+        <div class="header">
+            <span>Abraço</span>
+        </div>
+        <!-- <img src="https://image.flaticon.com/icons/svg/1530/1530737.svg" class="icon" alt=""> -->
+        <p class="msg">Receba um Abraço</p>
+        <button class="btn btn-primary" type="button">Abraço</button>
+    </div>
+</div>
+</body>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+    document.querySelector('button').addEventListener('click', function() {
+        document.querySelector('.msg').textContent = 'Abraço Recebido!'
+        document.querySelector('button').disabled = true;
+    });
+});
+</script>
+</html>
