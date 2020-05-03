@@ -18,14 +18,14 @@ html, body {
     align-items: center;
     padding-top: 42px;
     width: 100vw;
-    min-height: 60vh;
+    min-height: 70vh;
     max-height: 280px;
     height: 100vh;
     position: relative;
 }
 
 #intro > img {
-    width: 70vw;
+    width: 50vw;
     min-width: 250px;
     position: absolute;
     top: 50%;
