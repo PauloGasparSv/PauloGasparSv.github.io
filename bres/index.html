@@ -1,118 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles/style.min.css">
 </head>
 <body>
-    <nav>
-        <div class="burger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-        <ul>
-            <li class="active">Home</li>
-            <li class="hover">
-                <span>Beleza</span>
-                <div class="drop-list">
-                    <a href="#">
-                        <img class="icon" src="assets/make.png" alt="">
-                        Maquiagem
-                    </a>
-                    <a href="#">
-                        <img class="icon" src="assets/hair.svg" alt="">
-                        Cabelo
-                    </a>
-                    <a href="#">
-                        <img class="icon" src="assets/heart.png" alt="">
-                        Cuidados
-                    </a>
-                </div>
-            </li>
-            <li class="hover">
-                <span>Saúde Física</span>
-                <div class="drop-list">
-                    <a href="#">
-                        <img class="icon" src="assets/food.png" alt="">
-                        Comida
-                    </a>
-                    <a href="#">
-                        <img class="icon" src="assets/exercise.png" alt="">
-                        Exercícios
-                    </a>
-                </div>
-            </li>
-            <li>Esportes</li>
-        </ul>
-    </nav>
-    <section id="intro">
-        <!-- <img src="assets/logo.jpeg" alt=""> -->
-        <img style="max-width: 420px;" src="assets/logonome.png" alt="">
-    </section>
-    <div class="division"></div>
-    <section id="highlights">
-        <!-- <div class="title">Highlights</div> -->
-        <br>
-        <div class="grid">
-            <div class="card tall">
-                <div class="overlay"></div>
-                <img class="bg-img" src="https://picsum.photos/200/300" alt="">
-                <div class="title">Veja aqui as 5 maiores dicas!</div>
-            </div>
-            <div class="card">
-                <div class="overlay"></div>
-                <img class="bg-img" src="https://picsum.photos/200/300?1" alt="">
-                <div class="title">Veja aqui as 5 maiores dicas!</div>
-            </div>
-            <div class="card">
-                <div class="overlay"></div>
-                <img class="bg-img" src="https://picsum.photos/200/300?2" alt="">
-                <div class="title">Veja aqui as 5 maiores dicas!</div>
-            </div>
-            <div class="card">
-                <div class="overlay"></div>
-                <img class="bg-img" src="https://picsum.photos/200/300?3" alt="">
-                <div class="title">Veja aqui as 5 maiores dicas!</div>
-            </div>
-            <div class="card">
-                <div class="overlay"></div>
-                <img class="bg-img" src="https://picsum.photos/200/300?4" alt="">
-                <div class="title">Veja aqui as 5 maiores dicas!</div>
-            </div>
-            <div class="card">
-                <div class="overlay"></div>
-                <img class="bg-img" src="https://picsum.photos/200/300?5" alt="">
-                <div class="title">Veja aqui as 5 maiores dicas!</div>
-            </div>
-            <div class="card">
-                <div class="overlay"></div>
-                <img class="bg-img" src="https://picsum.photos/200/300?6" alt="">
-                <div class="title">Veja aqui as 5 maiores dicas!</div>
-            </div>
-            <div class="card wide">
-                <div class="overlay"></div>
-                <img class="bg-img" src="https://picsum.photos/200/300?7" alt="">
-                <div class="title">Veja aqui as 5 maiores dicas!</div>
-            </div>
-        </div>
-    </section>
-    <div class="division"></div>
-    <section id="articles">
-        Artigos
-        <br>
-        <br>
-        <div class="card">
-            <div class="thumb">
-                <img class="bg-img" src="https://picsum.photos/200/300?88" alt="">
-            </div>
-            <div class="text">Como fazer as melhores coisas com as dicas imperdíveis!</div>
-        </div>
-    </section>
-    <br><br><br><br>
+	<div class="invisilayer"></div>
+	<nav>
+		<div class="burger">
+			<div class="line"></div>
+			<div class="line"></div>
+			<div class="line"></div>
+		</div>
+		<ul>
+			<li class="active">Home</li>
+			<li class="hoverable">
+				<span>Beleza</span>
+				<div class="drop-list">
+					<a href="#">
+						<img class="icon" src="icons/makeup.svg" alt="">
+						Maquiagem
+					</a>
+					<a href="#">
+						<img class="icon" src="icons/hair.svg" alt="">
+						Cabelo
+					</a>
+					<a href="#">
+						<img class="icon" src="icons/heart.svg" alt="">
+						Cuidados
+					</a>
+				</div>
+			</li>
+			<li class="hoverable">
+				<span>Saúde Física</span>
+				<div class="drop-list">
+					<a href="#">
+						<img class="icon" src="icons/food.svg" alt="">
+						Comida
+					</a>
+					<a href="#">
+						<img class="icon" src="icons/exercise.svg" alt="">
+						Exercícios
+					</a>
+				</div>
+			</li>
+			<li>Esportes</li>
+			<li>Mídias</li>
+			<li>Contato</li>
+		</ul>
+	</nav>
+	<section class="content" id="intro">
+		<div class="logo">
+			<img src="images/logo.jpeg" alt="">
+			<div class="social">
+				<div class="centered">
+				<a href="#" class="face"></a>
+				<a href="#" class="insta"></a>
+				<a href="#" class="tweet"></a>
+				<a href="#" class="whats"></a>
+			</div>
+			</div>
+		</div>
+	</section>
+	<div class="division content"></div>
+	<section class="content" id="highlights">
+		<!-- <div class="title">Highlights</div> -->
+		<br>
+		<div class="grid">
+			<div class="card tall">
+				<div class="overlay"></div>
+				<img class="bg-img" src="https://picsum.photos/200/300" alt="">
+				<div class="title">Veja aqui as 5 maiores dicas!</div>
+			</div>
+			<div class="card wide">
+				<div class="overlay"></div>
+				<img class="bg-img" src="https://picsum.photos/200/300?1" alt="">
+				<div class="title">Veja aqui as 5 maiores dicas!</div>
+			</div>
+			<div class="card">
+				<div class="overlay"></div>
+				<img class="bg-img" src="https://picsum.photos/200/300?2" alt="">
+				<div class="title">Veja aqui as 5 maiores dicas!</div>
+			</div>
+			<div class="card">
+				<div class="overlay"></div>
+				<img class="bg-img" src="https://picsum.photos/200/300?3" alt="">
+				<div class="title">Veja aqui as 5 maiores dicas!</div>
+			</div>
+			<div class="card  hide-sm">
+				<div class="overlay"></div>
+				<img class="bg-img" src="https://picsum.photos/200/300?6" alt="">
+				<div class="title">Veja aqui as 5 maiores dicas!</div>
+			</div>
+			<div class="card wide hide-sm">
+				<div class="overlay"></div>
+				<img class="bg-img" src="https://picsum.photos/200/300?7" alt="">
+				<div class="title">Veja aqui as 5 maiores dicas!</div>
+			</div>
+		</div>
+	</section>
+	<div class="division content"></div>
+	<section class="content" id="articles">
+		Artigos
+		<div class="card">
+			<div class="thumb">
+				<img class="bg-img" src="https://picsum.photos/200/300?88" alt="">
+			</div>
+			<div class="text">Como fazer as melhores coisas com as dicas imperdíveis!</div>
+		</div>
+	</section>
+	<section class="content" id="flaticon-atrib">
+		<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+	</section>
+	<script src="scripts/script.min.js"></script>
 </body>
 </html>
