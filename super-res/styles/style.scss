@@ -118,7 +118,6 @@ nav {
 	z-index: 10;
 
 	div.side-nav-content {
-		
 		position: absolute;
 		background-color: var(--light-green);
 		z-index: 2;
@@ -143,7 +142,6 @@ nav {
 			padding-top: 4px;
 			padding-bottom: 4px;
 			padding-left: 0;
-	
 			& > li {
 				cursor: pointer;
 				padding: 12px;
@@ -650,41 +648,52 @@ footer {
 		& > .burger {
 			display: none;
 		}
-		& > ul {
-			background-color: transparent;
+		div.side-nav-content {
 			position: relative;
-			top: 0;
-			margin: 0;
-			padding-left: 12px;
-			font-size: 11px;
 			width: 100%;
 			height: auto;
+			display: block;
+			background-color: var(--white-color);
 			transform: none;
 			box-shadow: none;
-			& > li {
-				cursor: pointer;
-				display: inline-block;
-				margin-right: 0px;
-				transition: transform 0.2s;
-				color: #000;
-				&.hoverable:hover .drop-list {
-					opacity: 1;
-					top: 28px;
-					left: 0;
-					padding-top: 20px;
-					&::after {
-						top: 13px;
+			& > ul {
+				background-color: transparent;
+				position: relative;
+				top: 0;
+				margin: 0;
+				padding-left: 12px;
+				font-size: 11px;
+				width: 100%;
+				height: auto;
+				transform: none;
+				box-shadow: none;
+				& > li {
+					cursor: pointer;
+					display: inline-block;
+					margin-right: 0px;
+					transition: transform 0.2s;
+					color: #000;
+					font-size: 12px;
+					padding: 8px;
+					&.hoverable:hover .drop-list {
+						opacity: 1;
+						top: 28px;
+						left: 0;
+						padding-top: 20px;
+						&::after {
+							top: 13px;
+						}
 					}
-				}
-				&:hover {
-					transform: translateY(-2px);
-				}
+					&:hover {
+						transform: translateY(-2px);
+					}
 
-				&.active {
-					color: var(--primary-color);
-					font-weight: bold;
-					font-size: unset;
-					text-shadow: none;
+					&.active {
+						color: var(--primary-color);
+						font-weight: bold;
+						font-size: 12px;
+						text-shadow: none;
+					}
 				}
 			}
 		}
@@ -763,11 +772,18 @@ footer {
 	}
 
 	nav {
-		& > ul {
-			padding-left: 18px;
-			font-size: 14px;
-			& > li {
-				margin-right: 8px;
+		div.side-nav-content {
+			& > ul {
+				padding-left: 18px;
+				font-size: 14px;
+				& > li {
+					margin-right: 8px;
+					font-size: 14px;
+					padding: 12px;
+					&.active {
+						font-size: 14px;
+					}
+				}
 			}
 		}
 	}
@@ -796,9 +812,11 @@ footer {
 	}
 
 	nav {
-		& > ul {
-			& > li {
-				margin-right: 12px;
+		div.side-nav-content {
+			& > ul {
+				& > li {
+					margin-right: 12px;
+				}
 			}
 		}
 	}
