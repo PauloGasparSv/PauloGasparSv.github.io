@@ -650,14 +650,6 @@
         .division {
             margin: 20px auto 0px auto;
         }
-        #articles {
-            & > .grid {
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                .card {
-                    max-width: 450px;
-                }
-            }
-        }
     }
     
     @media screen and (min-width: 769px) {
