@@ -622,14 +622,26 @@ footer {
 	align-items: center;
 	font-size: 14px;
 	font-family: 'Open Sans', sans-serif;
-	div {
+	& > div {
 		position: absolute;
-		font-size: 12px;
-		color: #fff;
-		right: 24px;
-		bottom: 4px;
-		a {
+		left: 0;
+		right: 0;
+		bottom: 6px;
+		display: flex;
+		justify-content: center;
+		div {
+			font-size: 10px;
 			color: #fff;
+			margin-right: 12px;
+			a {
+				color: #fff;
+			}
+			&:nth-child(2) {
+				color: #f0caca;
+				a {
+					color: #f0caca;
+				}
+			}
 		}
 	}
 }
