@@ -23,10 +23,28 @@ window.addEventListener('DOMContentLoaded', function() {
             handleMenu();
         });
     }
+
+    const articles = document.querySelectorAll('#articles .grid > div');
+    if (articles && articles.length > 0) {
+        // data-aos-duration="200" data-aos="zoom-in-up"
+        articles.forEach(function(a) {
+            let firstCard = true;
+            a.querySelectorAll('.card').forEach(function(c) {
+                if (firstCard) {
+                    firstCard = false;
+                    return;
+                }
+                c.setAttribute('data-aos-duration', '200')
+                c.setAttribute('data-aos', 'zoom-in-up')
+            });
+        });
+    }
+
+    if (AOS) {
+        AOS.init();
+    } else {
+        console.error('AOS not found!')
+    }
+
 });
 
-if (AOS) {
-    AOS.init();
-} else {
-    console.error('AOS not found!')
-}

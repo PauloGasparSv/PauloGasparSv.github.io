@@ -29,6 +29,16 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+.noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	  -webkit-user-select: none; /* Safari */
+	   -khtml-user-select: none; /* Konqueror HTML */
+		 -moz-user-select: none; /* Old versions of Firefox */
+		  -ms-user-select: none; /* Internet Explorer/Edge */
+			  user-select: none; /* Non-prefixed version, currently
+									supported by Chrome, Edge, Opera and Firefox */
+}
+
 .division {
 	width: 90vw;
 	height: 2px;
@@ -208,7 +218,7 @@ nav {
 						background-color: var(--white-color);
 					}
 				}
-				&.hoverable:hover .drop-list {
+				&:hover .drop-list {
 					opacity: 1;
 					top: 0;
 					left: 100%;
@@ -641,7 +651,7 @@ footer {
 	&.smaller::before {
 		width: 15%;
 	}
-	
+
 	&::after {
 		content: "";
 		display: block;
@@ -740,15 +750,12 @@ footer {
 					color: #000;
 					font-size: 12px;
 					padding: 8px;
-					&.hoverable:hover .drop-list {
+					&:hover .drop-list {
 						opacity: 1;
 						top: 40px;
 						left: 0;
 						box-shadow: 2px 2px 5px 0 rgba(0,0,0, 0.2);
 						border-radius: 4px;
-						&::after {
-							top: 13px;
-						}
 					}
 					&:hover {
 						transform: translateY(-2px);
