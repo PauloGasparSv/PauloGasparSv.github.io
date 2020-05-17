@@ -7,7 +7,8 @@
 	<title>Document</title>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="styles/post.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link rel="stylesheet" href="styles/style.min.css">
 </head>
 
 <body>
@@ -20,55 +21,43 @@
 		</div>
 		<div class="side-nav-content">
 			<ul>
-				<li class="active">Home</li>
-				<li class="hoverable">
-					<span>Beleza</span>
+				<li class="active noselect"><a href="index.html">Home</a></li>
+				<li>
+					<span class="noselect">Beleza</span>
 					<div class="drop-list">
-						<a href="#">
+						<a class="noselect" href="posts.html">
 							<img class="icon" src="icons/makeup.svg" alt="">
 							Maquiagem
 						</a>
-						<a href="#">
+						<a class="noselect" href="posts.html">
 							<img class="icon" src="icons/hair.svg" alt="">
 							Cabelo
 						</a>
-						<a href="#">
+						<a class="noselect" href="posts.html">
 							<img class="icon" src="icons/heart.svg" alt="">
 							Cuidados
 						</a>
 					</div>
 				</li>
-				<li class="hoverable">
-					<span>Saúde Física</span>
+				<li>
+					<span class="noselect">Saúde Física</span>
 					<div class="drop-list">
-						<a href="#">
+						<a class="noselect" href="#">
 							<img class="icon" src="icons/food.svg" alt="">
 							Comida
 						</a>
-						<a href="#">
+						<a class="noselect" href="#">
 							<img class="icon" src="icons/exercise.svg" alt="">
 							Exercícios
 						</a>
 					</div>
 				</li>
-				<li>Esportes</li>
-				<li>Mídias</li>
-				<li>Contato</li>
+				<li class="noselect"><a href="posts.html">Esportes</a></li>
+				<li class="noselect"><a href="posts.html">Mídias</a></li>
+				<li class="noselect"><a href="posts.html">Contato</a></li>
 			</ul>
 		</div>
 	</nav>
-	<section class="content" id="intro">
-		<div class="logo">
-			<img src="images/logo.jpeg" alt="">
-			<div class="social">
-				<div class="centered">
-					<a href="#" class="face"></a>
-					<a href="#" class="insta"></a>
-					<a href="#" class="tweet"></a>
-				</div>
-			</div>
-		</div>
-	</section>
 	<div class="division content"></div>
 	<section class="content" id="article">
 		<div class="thumb">
@@ -95,11 +84,12 @@
 		</p>
 	</section>
 	<footer>
-		Super Resolvida 2020
-		<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a
-				href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+		©2020 Super Resolvida. Todos os direitos reservados.
+		<div>
+			<div>Logo feita por <a href="https://www.behance.net/carolalmeida1" title="Carolina">Carolina Almeida</a></div><div> Icons made by<a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+		</div>
 	</footer>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script src="scripts/script.min.js"></script>
 </body>
-
 </html>

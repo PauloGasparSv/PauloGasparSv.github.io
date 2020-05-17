@@ -26,7 +26,6 @@ window.addEventListener('DOMContentLoaded', function() {
 
     const articles = document.querySelectorAll('#articles .grid > div');
     if (articles && articles.length > 0) {
-        // data-aos-duration="200" data-aos="zoom-in-up"
         articles.forEach(function(a) {
             let firstCard = true;
             a.querySelectorAll('.card').forEach(function(c) {
@@ -40,10 +39,8 @@ window.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    if (AOS) {
+    if (AOS && AOS.init) {
         AOS.init();
-    } else {
-        console.error('AOS not found!')
     }
 
 });
