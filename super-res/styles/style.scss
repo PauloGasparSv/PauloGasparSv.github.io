@@ -160,7 +160,6 @@ nav {
 					background-color: transparent;
 					margin-right: 10px;
 				}
-	
 				& > .drop-list {
 					position: absolute;
 					top: -400px;
@@ -393,7 +392,7 @@ nav {
 	width: 100vw;
 
 	min-height: auto;
-	max-height: 210px;
+	max-height: 300px;
 	height: 100vh;
 
 	& > .logo {
@@ -533,20 +532,6 @@ nav {
 			justify-content: flex-start;
 			align-items: center;
 
-			.title {
-				border-radius: 10px;
-				padding: 4px 30px;
-				margin-bottom: 12px;
-				background-color: var(--light-pink);
-				color: #fff;
-				font-size: 12px;
-				text-align: center;
-			}
-			&:nth-of-type(even) {
-				.title {
-					background-color: var(--light-green);
-				}
-			}
 			.card {
 				cursor: pointer;
 				max-width: 240px;
@@ -567,6 +552,17 @@ nav {
 						width: 110%;
 					}
 				}
+				.title {
+					margin-top: 12px;
+					margin-left: 12px;
+					border-radius: 10px;
+					padding: 4px 30px;
+					background-color: var(--light-pink);
+					color: #fff;
+					font-size: 12px;
+					text-align: center;
+					width: fit-content;
+				}
 				header {
 					font-weight: bold;
 					padding: 12px;
@@ -578,9 +574,27 @@ nav {
 					padding: 0 12px;
 				}
 				&:hover {
-					box-shadow: 4px 4px 5px 0 rgba(0,0,0,.4);
-    				transform: scale(1.05);
+					box-shadow: 2px 2px 4px 0 rgba(0,0,0,.15);
+    				transform: scale(1.02);
 				}
+			}
+			&.makeup .card .title {
+				background-color: var(--primary-color);
+			}
+			&.hair .card .title {
+				background-color: rgb(207, 126, 33);
+			}
+			&.care .card .title {
+				background-color: var(--light-green);
+			}
+			&.food .card .title {
+				background-color: #631563;
+			}
+			&.exercises .card .title {
+				background-color: rgb(255, 38, 0);
+			}
+			&.sports .card .title {
+				background-color: #7a7ad8;
 			}
 		}
 	}
@@ -730,7 +744,6 @@ footer {
 						opacity: 1;
 						top: 40px;
 						left: 0;
-						padding-top: 20px;
 						box-shadow: 2px 2px 5px 0 rgba(0,0,0, 0.2);
 						border-radius: 4px;
 						&::after {
@@ -790,7 +803,7 @@ footer {
 
 @media screen and (min-width: 769px) {
 	#intro {
-		min-height: 40vh;
+		min-height: 55vh;
 		max-height: 300px;
 		height: 100vh;
 		& > .logo {
@@ -894,7 +907,7 @@ footer {
 
 @media screen and (min-width: 1281px) {
 	.content {
-		max-width: 1200px;
+		max-width: 1000px;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -902,7 +915,7 @@ footer {
 
 @media screen and (min-width: 1500px) {
 	.content {
-		max-width: 1476px;
+		max-width: 1400px;
 		margin-left: auto;
 		margin-right: auto;
 	}

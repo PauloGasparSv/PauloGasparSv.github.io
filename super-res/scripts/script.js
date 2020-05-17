@@ -24,3 +24,9 @@ window.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+if (AOS) {
+    AOS.init();
+} else {
+    console.error('AOS not found!')
+}
