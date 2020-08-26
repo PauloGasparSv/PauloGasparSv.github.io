@@ -4,8 +4,7 @@
   "description": "My portifolio",
   "main": "index.html",
   "scripts": {
-    "start": "FLASK_APP=app.py flask run --port=8000",
-    "watch": "gulp watch",
+    "start": "gulp watch",
     "gulp": "gulp"
   },
   "devDependencies": {
