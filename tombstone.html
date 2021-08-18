@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body, html {height:100%; margin: 0 auto}
+
+body {
+background: linear-gradient(to bottom,  rgba(255,204,153,1) 25%, #D49598 75%, rgba(212,149,152,1) 100%); /* W3C */
+}
+.footer-container {
+	margin: 0 auto;	
+	text-align: center;
+  min-height: 100%;
+  position: relative;
+}
+
+.tombstone {
+	position: absolute;
+	display: inline-block;	
+	text-align: center;	
+	font-size: 0;
+	bottom: 150px;
+  left: calc(50% - 100px);
+}
+
+.upperTombstone {
+	border-radius: 50%;
+	width: 200px;
+	height: 90px;
+	background: grey;
+	margin: 0 auto;
+	position: relative;
+	top: 65px;
+	z-index: -10;
+	font-size: 1rem;
+}
+
+.lowerTombstone {
+	width: 250px;
+	background: grey;
+	border-radius: 5px 5px 0px 0px;
+	overflow: hidden;
+	position: relative;
+	font-size: 1rem;
+	padding: 5px 0px 95px 0px;
+
+
+	.name {
+		border: 2px solid black;
+		display: inline-block;
+		padding: 3px 50px;
+		margin-top: 20px;
+		overflow: hidden;
+		color: black;
+		text-shadow: 1px 1px 1px #D0D2E8;
+		box-shadow: 1px 1px 1px #D0D2E8;
+
+		p {
+			margin: 0;
+			font-family: 'Kite One', sans-serif;	
+			font-size: 2.2rem;		
+		}
+
+		p:nth-child(2) {
+			font-size: 0.8rem;
+		}
+	} // end name
+
+	p {
+		margin: 0;
+		text-shadow: 1px 1px 1px #D0D2E8;
+	}
+
+	a {
+		margin: 10px auto;
+		text-shadow: 1px 1px 1px #D0D2E8;
+		font-family: 'Kite One', sans-serif;
+		color: black; 
+    display: inline-block;
+	}
+} // end lowerTombstone
+
+.grounder {
+    width: 100%;
+    background: #9ffff5;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    left: 0;
+}
+
+	</style>
+</head>
+<body>
+	<div class="footer-container">
+
+		<!-- start tombstone-->
+		<div class="tombstone">
+			<div class="upperTombstone"></div>
+			<div class="lowerTombstone">
+			<a href="#top" class="">
+				<div class="name">
+					<p>doored</p>
+					<p>2012 - 2015</p>
+				</div><!--end .name-->
+			</a>
+	
+				<a href="mailto://lifeofacraphead@gmail.com" target="_blank">lifeofacraphead@gmail.com</a>
+			</div><!--end .lowerTombstone-->
+		</div><!--end .tombstone-->
+	
+		<div class="grounder"></div>
+	  </div><!--end .footer-container-->
+	
+</body>
+</html>
