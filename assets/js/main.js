@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
         let index = parseInt(this.getAttribute('data-index'));
         if (index < 9) {
             index ++;
+        } else {
+            index = 0;
         }
         this.setAttribute('data-index', index);
         this.setAttribute('src', `public/images/profiles/${index}.jpeg`);

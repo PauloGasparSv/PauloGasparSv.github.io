@@ -13,7 +13,7 @@ body {
 
 
 #introduction {
-    background: #222;
+    background: #121c24;
     width: 100vw;
     height: 100vh;
     max-width: 100vw;
@@ -159,12 +159,13 @@ body {
 }
 
 #works {
-    background: #fff;
     width: 100vw;
     max-width: 100vw;
     overflow-x: hidden;
     padding: 8px 32px;
     min-height: 300px;
+    max-width: 900px;
+    margin: auto;
     & > div:not(.division) {
         display: flex;
         flex-direction: row;
@@ -252,7 +253,7 @@ body {
 }
 
 #experience {
-    background: #222;
+    background: #121c24;
     width: 100vw;
     max-width: 100vw;
     overflow-x: hidden;
@@ -260,6 +261,8 @@ body {
     padding: 8px 32px 32px 8px;
     color: #fff;
     .timeline {
+        max-width: 900px;
+        margin: auto;
         display: grid;
         grid-template-columns: 4px 1fr;
         padding: 8px 0 36px 32px;
@@ -354,17 +357,19 @@ body {
     background: #fff;
     padding: 8px 32px;
     padding-bottom: 64px;
-    width: 100vw;
-    max-width: 100vw;
+    max-width: 900px;
+    margin: auto;
     overflow-x: hidden;
     .grid {
         width: 100%;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-column-gap: 16px;
         grid-row-gap: 16px;
+        max-height: 400px;
+        overflow-y: auto;
         .item {
-            background: #222;
+            background: #121c24;
             width: 100%;
             min-height: 200px;
             border-radius: 8px;
@@ -407,55 +412,6 @@ body {
     }
 }
 
-#skills {
-    background: #222;
-    color: #fff;
-    padding: 8px 32px 32px 32px;
-    width: 100vw;
-    max-width: 100vw;
-    overflow-x: hidden;
-    .badges {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        flex-direction: row;
-        width: 100%;
-        margin-top: 32px;
-        .badge {
-            margin-right: 16px;
-            margin-bottom: 16px;
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            overflow: hidden;
-            box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.25);
-            transition: 0.2s;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            background: #fff;
-            img {
-                width: 90%;
-                transition: width 0.2s;
-                border-radius: 50%;
-            }
-            &:hover {
-                box-shadow: 2px 5px 8px 1px rgba(0, 0, 0, 0.3);
-                transform: translateY(-2px);
-                img {
-                    width: 100%;
-                }
-                .label {
-                    opacity: 1;
-                }
-            }
-        }
-    }
-}
-
 #credits {
     background: #1d1d1d;
     color: #fff;
@@ -463,8 +419,15 @@ body {
     width: 100vw;
     max-width: 100vw;
     overflow-x: hidden;
-    font-size: 0.85rem;
+    font-size: 0.5rem;
     position: relative;
+
+    & > div {
+        max-width: 400px;
+        text-align: center;
+        margin: auto;
+    }
+
     a {
         text-decoration: none;
         color: $primary !important;
@@ -806,6 +769,14 @@ body {
 
     }
 
+}
+
+h2.title {
+    text-align: center;
+    color: #121c24;
+}
+.text {
+    color: #121c24;
 }
 
 @media screen and (max-width: 560px) {
